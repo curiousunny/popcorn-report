@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@theme {
+  --color-paper:      #F5EFE4;
+  --color-paper-deep: #EBE1D0;
+  --color-ink:        #2B2418;
+  --color-ink-muted:  #4A423A;
+  --color-ochre:      #C68A3E;
+  --color-rose:       #C17B7B;
+  --color-sage:       #8A9A7B;
+  --color-teal:       #3E6B6B;
+  --color-cream:      #FBF7EF;
+
+  /* Resolved via CSS vars set on <html> by next/font */
+  --font-display: var(--font-fraunces);
+  --font-body:    var(--font-source-serif);
+  --font-accent:  var(--font-caveat);
+}
+
+/* Short aliases for use in inline styles and custom CSS */
 :root {
   --paper:      #F5EFE4;
   --paper-deep: #EBE1D0;
@@ -12,30 +30,9 @@
   --cream:      #FBF7EF;
 }
 
-@theme inline {
-  --color-paper:      var(--paper);
-  --color-paper-deep: var(--paper-deep);
-  --color-ink:        var(--ink);
-  --color-ink-muted:  var(--ink-muted);
-  --color-ochre:      var(--ochre);
-  --color-rose:       var(--rose);
-  --color-sage:       var(--sage);
-  --color-teal:       var(--teal);
-  --color-cream:      var(--cream);
-
-  --font-display: var(--font-fraunces);
-  --font-body:    var(--font-source-serif);
-  --font-accent:  var(--font-caveat);
-}
-
 body {
   background-color: var(--paper);
   color: var(--ink);
   font-family: var(--font-source-serif), Georgia, serif;
   line-height: 1.65;
-}
-
-/* Fraunces display uses optical sizing per spec */
-.font-display {
-  font-optical-sizing: auto;
 }
