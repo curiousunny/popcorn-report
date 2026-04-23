@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --paper:      #F5EFE4;
+  --paper-deep: #EBE1D0;
+  --ink:        #2B2418;
+  --ink-muted:  #4A423A;
+  --ochre:      #C68A3E;
+  --rose:       #C17B7B;
+  --sage:       #8A9A7B;
+  --teal:       #3E6B6B;
+  --cream:      #FBF7EF;
+}
+
+@theme inline {
+  --color-paper:      var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink:        var(--ink);
+  --color-ink-muted:  var(--ink-muted);
+  --color-ochre:      var(--ochre);
+  --color-rose:       var(--rose);
+  --color-sage:       var(--sage);
+  --color-teal:       var(--teal);
+  --color-cream:      var(--cream);
+
+  --font-display: var(--font-fraunces);
+  --font-body:    var(--font-source-serif);
+  --font-accent:  var(--font-caveat);
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-source-serif), Georgia, serif;
+  line-height: 1.65;
+}
+
+/* Fraunces display uses optical sizing per spec */
+.font-display {
+  font-optical-sizing: auto;
+}
