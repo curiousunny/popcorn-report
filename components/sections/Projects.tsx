@@ -5,6 +5,7 @@ import { PROJECTS, STATUS_LABELS, type Project } from "@/content/data/site-data"
 import { Avatar } from "@/components/ui/Avatar";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { CopyLink } from "@/components/ui/CopyLink";
+import { SectionBanner } from "@/components/ui/SectionBanner";
 
 const TYPES = [
   { key: "all",       label: "All Projects" },
@@ -58,15 +59,17 @@ function ProjectCard({ project, expanded, onToggle }: { project: Project; expand
       {expanded && (
         <div style={{ padding: "0 24px 24px", borderTop: "1px solid #f5f5f5" }}>
           {[
-            { icon: "❓", label: "What we want to know", text: project.what },
-            { icon: "🔧", label: "How we're doing it",   text: project.how },
-            { icon: "📊", label: "How it's going",       text: project.going },
+            { label: "What we want to know", text: project.what },
+            { label: "How we're doing it",   text: project.how },
+            { label: "How it's going",       text: project.going },
           ].map((item) => (
             <div key={item.label} style={{ marginTop: 18 }}>
-              <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 15, color: "#25a89e", marginBottom: 4, display: "flex", alignItems: "center", gap: 6 }}>
-                <span>{item.icon}</span> {item.label}
+              <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 15, color: "#25a89e", marginBottom: 4 }}>
+                {item.label}
               </div>
-              <p style={{ fontFamily: "var(--font-poppins)", fontSize: 14, color: "#444", lineHeight: 1.7, margin: 0 }}>{item.text}</p>
+              {item.text.split("\n\n").map((para, k) => (
+                <p key={k} style={{ fontFamily: "var(--font-poppins)", fontSize: 14, color: "#444", lineHeight: 1.7, margin: k === 0 ? 0 : "10px 0 0" }}>{para}</p>
+              ))}
             </div>
           ))}
           <div style={{ marginTop: 16 }}>
@@ -100,16 +103,7 @@ export function Projects() {
 
   return (
     <section id="projects" style={{ scrollMarginTop: 80 }}>
-      <div style={{ marginBottom: 40 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>03 — Research</div>
-          <CopyLink id="projects" />
-        </div>
-        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: "#253587", margin: 0 }}>Project Updates</h2>
-        <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#555", marginTop: 12, lineHeight: 1.6 }}>
-          {PROJECTS.length} projects across {Object.keys(GROUP_LABELS).length} categories, as of April 2026.
-        </p>
-      </div>
+      <SectionBanner id="projects" title="Project Updates" subtitle={`${PROJECTS.length} projects across ${Object.keys(GROUP_LABELS).length} categories. Project statuses are as of April 2026.`} />
 
       {/* Lifecycle mini-chart */}
       <div style={{ background: "white", borderRadius: 14, padding: "20px 24px", marginBottom: 28, boxShadow: "0 2px 12px rgba(37,53,135,0.06)" }}>

@@ -1,23 +1,12 @@
 import { ECR_VOICES } from "@/content/data/site-data";
 import { Avatar } from "@/components/ui/Avatar";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { CopyLink } from "@/components/ui/CopyLink";
+import { SectionBanner } from "@/components/ui/SectionBanner";
 
 export function ECR() {
   return (
     <section id="ecr" style={{ scrollMarginTop: 80 }}>
-      <div style={{ marginBottom: 40 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>06 — Career Advancement</div>
-          <CopyLink id="ecr" />
-        </div>
-        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: "#253587", margin: 0 }}>
-          Early Career Researchers
-        </h2>
-        <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#555", marginTop: 12, maxWidth: 640, lineHeight: 1.6 }}>
-          POPCORN supports trainees through a developing mentorship program and collaborations with ENRICH and IMPaCT training programs.
-        </p>
-      </div>
+      <SectionBanner id="ecr" title="Early Career Researchers & Career Advancement" subtitle="POPCORN has supported trainees and early career researchers through the developing mentorship program as well as through collaborations with ENRICH and IMPaCT training programs." />
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
         {ECR_VOICES.map((v, i) => (
@@ -27,9 +16,11 @@ export function ECR() {
               <svg style={{ marginBottom: 12, opacity: 0.3 }} width="32" height="24" viewBox="0 0 32 24" fill={v.color} aria-hidden="true">
                 <path d="M0 0h12v12H6L0 24V0zm20 0h12v12h-6L20 24V0z"/>
               </svg>
-              <p style={{ fontFamily: "var(--font-poppins)", fontSize: 14, color: "#444", lineHeight: 1.75, margin: "0 0 20px", fontStyle: "italic" }}>
-                &ldquo;{v.quote}&rdquo;
-              </p>
+              <div style={{ fontFamily: "var(--font-poppins)", fontSize: 14, color: "#444", lineHeight: 1.75, margin: "0 0 20px", fontStyle: "italic" }}>
+                {v.quote.split("\n\n").map((para, k) => (
+                  <p key={k} style={{ margin: k === 0 ? 0 : "10px 0 0" }}>{k === 0 ? `“${para}` : para}{k === v.quote.split("\n\n").length - 1 ? "”" : ""}</p>
+                ))}
+              </div>
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                 <Avatar initials={v.initials} color={v.color} size={44} />
                 <div>

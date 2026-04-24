@@ -91,6 +91,21 @@ export function Landing() {
             <Image src="/POPCORN_logo.png" alt="POPCORN" width={197} height={52} style={{ height: 52, width: "auto" }} priority />
           </div>
         </FadeIn>
+        <FadeIn delay={150}>
+          <div style={{ margin: "28px auto 0", maxWidth: 480 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/canada-map.png"
+              alt="Map of Canada showing POPCORN's coast-to-coast network"
+              style={{
+                width: "100%", height: "auto", display: "block",
+                filter: "saturate(0) brightness(3) drop-shadow(0 0 32px rgba(37,53,135,0.22))",
+                opacity: 0.8,
+                userSelect: "none",
+              }}
+            />
+          </div>
+        </FadeIn>
         <FadeIn delay={200}>
           <h1 style={{
             fontFamily: "var(--font-fraunces)", fontWeight: 700,

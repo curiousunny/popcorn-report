@@ -10,14 +10,17 @@ export function LandAck() {
         <p style={{ fontFamily: "var(--font-poppins)", fontSize: 16, color: "#444", lineHeight: 1.75, margin: 0 }}>
           {LAND_ACKNOWLEDGEMENT}
         </p>
-        <a
-          href="https://native-land.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: "inline-block", marginTop: 12, fontFamily: "var(--font-poppins)", fontSize: 13, color: "#25a89e" }}
-        >
-          Visit native-land.ca →
-        </a>
+        <p style={{ fontFamily: "var(--font-poppins)", fontSize: 15, color: "#444", lineHeight: 1.75, margin: "12px 0 0" }}>
+          Please take a moment, in your own time, to reflect on and recognize the lands on which you live, work, and travel to, by visiting{" "}
+          <a
+            href="https://native-land.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#25a89e" }}
+          >
+            native-land.ca
+          </a>.
+        </p>
       </div>
     </section>
   );

@@ -73,3 +73,16 @@ button { font-family: inherit; }
   70%  { opacity: 1; }
   100% { opacity: 0; transform: rotate(var(--rot, 0deg)) scale(1) translateY(-12px); }
 }
+
+/* Section banner: full-bleed within the padded content column */
+.section-banner {
+  margin-left: -48px;
+  margin-right: -48px;
+}
+
+@media (max-width: 768px) {
+  .section-banner {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}

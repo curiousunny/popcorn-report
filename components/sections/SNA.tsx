@@ -1,38 +1,33 @@
 import Image from "next/image";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { CopyLink } from "@/components/ui/CopyLink";
+import { SectionBanner } from "@/components/ui/SectionBanner";
 
 export function SNA() {
   return (
     <section id="sna" style={{ scrollMarginTop: 80 }}>
-      <div style={{ marginBottom: 40 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>08 — Social Network Analysis</div>
-          <CopyLink id="sna" />
-        </div>
-        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: "#253587", margin: 0 }}>
-          Snapshot of POPCORN&rsquo;s Network Impact
-        </h2>
-      </div>
+      <SectionBanner id="sna" title="Snapshot of POPCORN's Network Impact" />
 
       <div style={{ background: "#f8f9ff", borderRadius: 14, padding: "22px 28px", marginBottom: 32, border: "1px solid #e8edf8" }}>
         <p style={{ fontFamily: "var(--font-poppins)", fontSize: 15, color: "#555", lineHeight: 1.8, margin: 0 }}>
           In its third year, POPCORN took a close look at how the network is making a difference. An independent evaluation team (Genevieve Sutherns, Catherine Demers, Stephanie Glegg, Janet Curran) gathered feedback from members across Canada. Eighty-one members (32%) completed the survey, and 15 participated in interviews.
+        </p>
+        <p style={{ fontFamily: "var(--font-poppins)", fontSize: 15, color: "#555", lineHeight: 1.8, margin: "10px 0 0" }}>
+          The findings show that POPCORN is strengthening Canada's pediatric research community.
         </p>
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 32 }}>
         <FadeIn>
           <div style={{ background: "linear-gradient(135deg, #253587, #3a4faa)", borderRadius: 16, padding: "36px 28px", textAlign: "center", color: "white" }}>
-            <div style={{ fontFamily: "var(--font-fraunces)", fontSize: 60, fontWeight: 700, lineHeight: 1 }}>90%+</div>
+            <div style={{ fontFamily: "var(--font-fraunces)", fontSize: 60, fontWeight: 700, lineHeight: 1 }}>More than 90%</div>
             <div style={{ fontFamily: "var(--font-poppins)", fontSize: 15, opacity: 0.9, marginTop: 10, lineHeight: 1.6 }}>
-              said the network has increased their research collaborations, including partnerships beyond their own institutions
+              of respondents said the network has increased their research collaborations, including partnerships beyond their own institutions
             </div>
           </div>
         </FadeIn>
         <FadeIn delay={150}>
           <div style={{ background: "linear-gradient(135deg, #f4017f, #d90070)", borderRadius: 16, padding: "36px 28px", textAlign: "center", color: "white" }}>
-            <div style={{ fontFamily: "var(--font-fraunces)", fontSize: 60, fontWeight: 700, lineHeight: 1 }}>~80%</div>
+            <div style={{ fontFamily: "var(--font-fraunces)", fontSize: 60, fontWeight: 700, lineHeight: 1 }}>Nearly 80%</div>
             <div style={{ fontFamily: "var(--font-poppins)", fontSize: 15, opacity: 0.9, marginTop: 10, lineHeight: 1.6 }}>
               reported improved efficiency when starting new projects
             </div>

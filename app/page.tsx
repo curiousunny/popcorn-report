@@ -3,7 +3,6 @@ import { Landing } from "@/components/sections/Landing";
 import { LandAck } from "@/components/sections/LandAck";
 import { Leadership } from "@/components/sections/Leadership";
 import { Goals } from "@/components/sections/Goals";
-import { CanadaMap } from "@/components/sections/CanadaMap";
 import { Projects } from "@/components/sections/Projects";
 import { PatientEngagement } from "@/components/sections/PatientEngagement";
 import { EDI } from "@/components/sections/EDI";
@@ -42,8 +41,7 @@ export default function Home() {
           <LandAck />
           <div style={{ marginTop: 80 }}><Leadership /></div>
           <div style={{ marginTop: 80 }}><Goals /></div>
-          <div style={{ marginTop: 80 }}><CanadaMap /></div>
-          <div style={{ marginTop: 80 }}><Projects /></div>
+<div style={{ marginTop: 80 }}><Projects /></div>
           <div style={{ marginTop: 80 }}><PatientEngagement /></div>
           <div style={{ marginTop: 80 }}><EDI /></div>
           <div style={{ marginTop: 80 }}><ECR /></div>

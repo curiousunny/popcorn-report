@@ -1,21 +1,12 @@
 import { GOALS } from "@/content/data/site-data";
 import { GoalIcon } from "@/components/ui/GoalIcon";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { CopyLink } from "@/components/ui/CopyLink";
+import { SectionBanner } from "@/components/ui/SectionBanner";
 
 export function Goals() {
   return (
     <section id="goals" style={{ scrollMarginTop: 80 }}>
-      <div style={{ marginBottom: 40 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>02 — Goals</div>
-          <CopyLink id="goals" />
-        </div>
-        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: "#253587", margin: 0 }}>Our Five Goals</h2>
-        <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#555", marginTop: 12, maxWidth: 640, lineHeight: 1.6 }}>
-          By meeting these goals, POPCORN ensures children and pregnant people across Canada get the care they need — and that we&rsquo;re ready for the next health crisis.
-        </p>
-      </div>
+      <SectionBanner id="goals" title="Our Five Goals" subtitle="By meeting our goals and objectives, POPCORN is helping ensure that children and pregnant people across Canada get the care they need – and that we are ready to face the next health crisis with a united, prepared response." />
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20 }}>
         {GOALS.map((g, i) => (

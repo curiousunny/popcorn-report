@@ -1,19 +1,11 @@
 import { PE_SESSIONS } from "@/content/data/site-data";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { CopyLink } from "@/components/ui/CopyLink";
+import { SectionBanner } from "@/components/ui/SectionBanner";
 
 export function PatientEngagement() {
   return (
     <section id="patient-engagement" style={{ scrollMarginTop: 80 }}>
-      <div style={{ marginBottom: 40 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>04 — Patient Engagement</div>
-          <CopyLink id="patient-engagement" />
-        </div>
-        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: "#253587", margin: 0 }}>
-          Patient Engagement Training Series
-        </h2>
-      </div>
+      <SectionBanner id="patient-engagement" title="Patient Engagement Training Series" />
 
       <div style={{ background: "#fff8fb", borderRadius: 14, padding: "22px 28px", border: "1px solid #fdcce1", marginBottom: 28 }}>
         <p style={{ fontFamily: "var(--font-poppins)", fontSize: 15, color: "#555", lineHeight: 1.8, margin: 0 }}>

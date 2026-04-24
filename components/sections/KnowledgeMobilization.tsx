@@ -1,6 +1,6 @@
 import { REACH_STATS } from "@/content/data/site-data";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { CopyLink } from "@/components/ui/CopyLink";
+import { SectionBanner } from "@/components/ui/SectionBanner";
 import { Counter } from "@/components/ui/Counter";
 
 const OUTPUTS = [
@@ -17,7 +17,8 @@ const OUTPUTS = [
   {
     category: "Publications",
     items: [
-      "2 academic publications",
+      "Irwin SH, McCluskey A, Dong SY, et al. Informing Eating Disorder Support Through Lived Experience. Journal of Patient Experience. 2025;12. doi:10.1177/23743735251346617",
+      "Carwana M, Roumeliotis N, Dean P, et al. Hospital admissions for maltreatment among children younger than 2 years during the COVID-19 pandemic in Canada. CMAJ. 2026;198(6):E207-E215. doi:10.1503/cmaj.251317",
       "1 poster presentation",
       "1 podcast",
       "2 oral research presentations",
@@ -37,18 +38,7 @@ const OUTPUTS = [
 export function KnowledgeMobilization() {
   return (
     <section id="km" style={{ scrollMarginTop: 80 }}>
-      <div style={{ marginBottom: 40 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>07 — Knowledge Mobilization</div>
-          <CopyLink id="km" />
-        </div>
-        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: "#253587", margin: 0 }}>
-          Knowledge Mobilization Tools &amp; Impact
-        </h2>
-        <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#555", marginTop: 12, maxWidth: 640, lineHeight: 1.6 }}>
-          POPCORN&rsquo;s website and newsletter launched in 2022 and continues to grow. Website content is updated regularly, attracting more traffic. The top page views include: What is POPCORN?, Leadership, Projects, and Conference.
-        </p>
-      </div>
+      <SectionBanner id="km" title="Knowledge Mobilization Tools & Impact" subtitle="POPCORN's website and newsletter launched in 2022 and continues to grow. Website content is updated regularly, attracting more traffic. The top page views include: What is POPCORN?, Leadership, Projects, and Conference." />
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20, marginBottom: 48 }}>
         {OUTPUTS.map((o, i) => (

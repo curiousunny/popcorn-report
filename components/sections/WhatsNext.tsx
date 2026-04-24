@@ -2,19 +2,13 @@
 
 import { useState } from "react";
 import { WHATS_NEXT } from "@/content/data/site-data";
-import { CopyLink } from "@/components/ui/CopyLink";
+import { SectionBanner } from "@/components/ui/SectionBanner";
 
 export function WhatsNext() {
   const [expanded, setExpanded] = useState(false);
   return (
     <section id="whats-next" style={{ scrollMarginTop: 80 }}>
-      <div style={{ marginBottom: 40 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>09 — What&rsquo;s to Come</div>
-          <CopyLink id="whats-next" />
-        </div>
-        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: "#253587", margin: 0 }}>Looking Ahead</h2>
-      </div>
+      <SectionBanner id="whats-next" title="What's to Come" />
 
       <div style={{ background: "linear-gradient(135deg, #f5f8ff, #fff8fb)", borderRadius: 20, padding: "40px 36px", boxShadow: "0 4px 32px rgba(37,53,135,0.08)", border: "1px solid #e8edf8" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 28 }}>

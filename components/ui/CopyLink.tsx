@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export function CopyLink({ id }: { id: string }) {
+export function CopyLink({ id, light }: { id: string; light?: boolean }) {
   const [copied, setCopied] = useState(false);
   const copy = () => {
     const url = window.location.href.split("#")[0] + "#" + id;
@@ -17,8 +17,9 @@ export function CopyLink({ id }: { id: string }) {
       title="Copy link to section"
       style={{
         background: "none", border: "none", cursor: "pointer", padding: "4px 8px",
-        color: copied ? "#25a89e" : "#bbb", fontSize: 13,
+        color: copied ? "#25a89e" : light ? "rgba(255,255,255,0.5)" : "#bbb", fontSize: 13,
         display: "flex", alignItems: "center", gap: 4, transition: "color 0.2s",
+        fontFamily: "var(--font-poppins)",
       }}
     >
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

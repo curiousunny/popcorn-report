@@ -1,22 +1,11 @@
 import { EDI_PROJECTS } from "@/content/data/site-data";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { CopyLink } from "@/components/ui/CopyLink";
+import { SectionBanner } from "@/components/ui/SectionBanner";
 
 export function EDI() {
   return (
     <section id="edi" style={{ scrollMarginTop: 80 }}>
-      <div style={{ marginBottom: 40 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>05 — EDI+I</div>
-          <CopyLink id="edi" />
-        </div>
-        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: "#253587", margin: 0 }}>
-          Equity, Diversity, Inclusion & Indigeneity
-        </h2>
-        <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#555", marginTop: 12, lineHeight: 1.6 }}>
-          EDI+I isn&rsquo;t a section of our work — it&rsquo;s a thread woven through everything we do.
-        </p>
-      </div>
+      <SectionBanner id="edi" title="Equity, Diversity, Inclusion & Indigeneity" />
 
       <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
         {EDI_PROJECTS.map((p, i) => (

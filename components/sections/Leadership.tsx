@@ -4,26 +4,14 @@ import { useState } from "react";
 import { LEADERS } from "@/content/data/site-data";
 import { Avatar } from "@/components/ui/Avatar";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { CopyLink } from "@/components/ui/CopyLink";
+import { SectionBanner } from "@/components/ui/SectionBanner";
 
 export function Leadership() {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
   return (
     <section id="leadership" style={{ scrollMarginTop: 80 }}>
-      {/* Section header */}
-      <div style={{ marginBottom: 40 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>01 — Leadership</div>
-          <CopyLink id="leadership" />
-        </div>
-        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: "#253587", margin: 0 }}>
-          Message from Leadership
-        </h2>
-        <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#555", marginTop: 12, lineHeight: 1.6 }}>
-          Voices from the people guiding POPCORN&rsquo;s mission.
-        </p>
-      </div>
+      <SectionBanner id="leadership" title="Message from Leadership" subtitle="Voices from the people guiding POPCORN's mission." />
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
         {LEADERS.map((l, i) => (

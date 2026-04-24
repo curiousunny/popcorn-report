@@ -10,7 +10,7 @@ export const SITE_META = {
 
 // ─── LAND ACKNOWLEDGEMENT ────────────────────────────────────────────────────
 
-export const LAND_ACKNOWLEDGEMENT = `POPCORN acknowledges that our network is situated on the unceded and ancestral territories of diverse Indigenous Peoples across Turtle Island. From coast to coast to coast, we respect and acknowledge Inuit, Métis, and First Nations peoples as the traditional stewards of the lands we work and live on. POPCORN is committed to working toward cultural safety, decolonization, and reconciliation.`;
+export const LAND_ACKNOWLEDGEMENT = `POPCORN acknowledges that our network is situated on the unceded and ancestral territories of diverse Indigenous Peoples across Turtle Island. From coast to coast to coast, we respect and acknowledge Inuit, Métis, and First Nations peoples as the traditional stewards of the lands we work and live on. For those of us who are settlers, we recognize that processes of colonization continue to impact Indigenous Peoples today. POPCORN is committed to working toward cultural safety, decolonization, and reconciliation.`;
 
 // ─── LEADERSHIP ──────────────────────────────────────────────────────────────
 
@@ -21,8 +21,8 @@ export const LEADERS = [
     role: "Network Principal Investigator",
     initials: "OD",
     color: "#253587",
-    pullQuote: "Seeing the development of collaborations and synergy that would likely not have seen the light of day otherwise constitutes one of the most concrete markers of success.",
-    full: `It is with much pride that I present POPCORN's 2026 impact report. Since its launch in March 2022, POPCORN has positioned itself as an essential pan-Canadian pediatric research initiative, bringing together researchers, clinicians, and knowledge users to better respond to major challenges in child and maternal health.\n\nFrom the beginning, POPCORN was created with a clear objective: to put in place a research infrastructure capable of rapidly responding to emerging health issues affecting children and pregnant people.\n\nIn the last few years, we have been able to enlist 16 pediatric hospitals across the country while working towards integrating their partnering maternal health centers as well as many national multidisciplinary networks. This "network of networks" approach allows us to lead collaborative and interdisciplinary research, drawing from the unique expertise of each participating network.\n\nThanks to the key support from CIHR and CBRF, POPCORN was able to build key infrastructure for pandemic preparedness. I look forward to continuing this collective adventure in the years to come.`,
+    pullQuote: "Seeing the development of collaborations and synergy that would likely not have seen the light of day otherwise constitutes, in my eyes, one of the most concrete markers of success.",
+    full: `It is with much pride that I present POPCORN's 2026 impact report. Since its launch in March 2022, POPCORN has positioned itself as an essential pan Canadian pediatric research initiative, bringing together researchers, clinicians, and knowledge users to better respond to major challenges in child and maternal health.\n\nFrom the beginning, POPCORN was created with a clear objective: to put in place a research infrastructure capable of rapidly responding to emerging health issues affecting children and pregnant people.\n\nIn the last few years, we have been able to enlist 16 pediatric hospitals across the country while working towards integrating their partnering maternal health centers as well as many national multidisciplinary networks. This "network of networks" approach allows us to lead collaborative and interdisciplinary research, drawing from the unique expertise of each participating network.\n\nOur platform relies on a robust governance structure, built around 5 core content pillars – emergency medicine, inpatient medicine, critical care, infectious diseases, and maternal health – as well as cross-cutting pillars including data governance and harmonization, knowledge mobilization, and patient engagement. Equity, diversity, inclusion and Indigeneity principles are integrated into all our activities. This structure ensures our research is scientifically rigorous, equitable, and truly centered on the patients.\n\nThanks to the key support from the Canadian Institutes of Health Research (CIHR) and the Canada Biomedical Research Fund (CBRF), POPCORN was able to build key infrastructure for pandemic preparedness. Our achievements would not be possible without the hard work performed by the Executive Committee, the Governance Committee, and the central operations team, including the support from MICYRN and CHU Sainte-Justine Research Center.\n\nPOPCORN has also played a unifying role within the pediatric community. Seeing the development of collaborations and synergy that would likely not have seen the light of day otherwise constitutes, in my eyes, one of the most concrete markers of success.\n\nI look forward to continuing this collective adventure in the years to come by fostering greater collaboration, promoting promising research initiatives, and generating tangible benefits for the health and well-being of children and pregnant people all over Canada. POPCORN remains firmly committed to strengthening and expanding its research capabilities and to becoming a leading player in Canadian research. Thank you all for your continued support.`,
   },
   {
     key: "gc",
@@ -31,18 +31,18 @@ export const LEADERS = [
     initials: "GC",
     color: "#25a89e",
     pullQuote: "POPCORN is building on COVID-19 lessons to help prepare the Canadian child health community for whatever comes next.",
-    full: `As a Governance Committee, our role is to ensure that POPCORN, as a research network, delivers on what it has committed to do. The oversight we provide offers important arm's-length accountability, helping to ensure that the network remains focused on its stated goals and objectives.\n\nAs highlighted in this Impact Report, POPCORN has evolved significantly from a network initially focused on COVID-19 to one that is now playing a broader role in preparing the Canadian ecosystem for future outbreaks. The COVID-19 pandemic clearly demonstrated the need for high quality research conducted with rigorous standards and with meaningful patient and community partnership throughout.\n\nPOPCORN just completed an incredibly useful Social Network Analysis of its activities, demonstrating our substantial impact on the child health ecosystem. Over the past year, the network has made strong progress on its three core deliverables: being a one-stop shop for clinical studies for future outbreaks, working on surveillance activities, and engaging with administrative data.`,
+    full: `As a Governance Committee, our role is to ensure that POPCORN, as a research network, delivers on what it has committed to do. The oversight we provide offers important arm's-length accountability, helping to ensure that the network remains focused on its stated goals and objectives.\n\nThe Committee is comprised of individuals who stand to benefit from the research generated by POPCORN. We meet regularly throughout the year with the network's leadership to monitor progress and to ensure that the original objectives continue to be met in an efficient, patient-focused and impactful way.\n\nAs highlighted in this Impact Report, POPCORN has evolved significantly from a network initially focused on COVID 19 to one that is now playing a broader role in preparing the Canadian ecosystem for future outbreaks. The COVID 19 pandemic clearly demonstrated the need for high quality research conducted with rigorous standards and with meaningful patient and community partnership throughout. POPCORN is building on those lessons to help prepare the Canadian child health community for whatever comes next.\n\nPOPCORN just completed an incredibly useful Social Network Analysis of its activities, demonstrating our substantial impact on the child health ecosystem. Community feedback particularly emphasized the value of the infrastructure and tools that POPCORN provides.\n\nOver the past year, the network has made strong progress on its three core deliverables: being a one-stop shop for clinical studies for future outbreaks, working on surveillance activities, and engaging with administrative data. These ambitious initiatives, if successful, could be transformative for Canadian child health. And as co-chairs of the Governance committee, we are committed to providing the oversight, and support to ensure continued alignment with POPCORN's mandate.`,
   },
 ] as const;
 
 // ─── GOALS ───────────────────────────────────────────────────────────────────
 
 export const GOALS = [
-  { id: 1, icon: "shield", headline: "Be Ready for Future Pandemics", desc: "Build a strong, flexible research system that can quickly respond to new health threats affecting kids and pregnant people across Canada." },
-  { id: 2, icon: "heart",  headline: "Improve Health for Pregnant People and Kids", desc: "Focus on important health issues by using the strengths of children's hospitals and research networks to do reliable, science-based studies." },
-  { id: 3, icon: "network", headline: "Work Better Together", desc: "Make it easier for researchers, doctors, families, and youth to team up on studies and clinical trials across different locations and specialties." },
-  { id: 4, icon: "equity", headline: "Make Research Fair and Inclusive", desc: "Involve people from all backgrounds and make sure everyone has a voice in research, especially those from underserved communities." },
-  { id: 5, icon: "compass", headline: "Help Leaders Make Smart Choices", desc: "Give health experts and decision-makers up-to-date, accurate information to guide public health actions — especially during outbreaks." },
+  { id: 1, icon: "shield",  headline: "Be Ready for Future Pandemics",           desc: "Build a strong, flexible research system that can quickly respond to new health threats affecting kids and pregnant people across Canada." },
+  { id: 2, icon: "heart",   headline: "Improve Health for Pregnant People and Kids", desc: "Focus on important health issues by using the strengths of children's hospitals and research networks to do reliable, science-based studies." },
+  { id: 3, icon: "network", headline: "Work Better Together",                     desc: "Make it easier for researchers, doctors, families, and youth to team up on studies and clinical trials across different locations and specialties." },
+  { id: 4, icon: "equity",  headline: "Make Research Fair and Inclusive",         desc: "Involve people from all backgrounds and make sure everyone has a voice in research, especially those from underserved communities." },
+  { id: 5, icon: "compass", headline: "Help Leaders Make Smart Choices",          desc: "Give health experts and decision-makers up-to-date, accurate information to guide public health actions—especially during outbreaks." },
 ] as const;
 
 // ─── PROJECT STATUS ───────────────────────────────────────────────────────────
@@ -65,42 +65,261 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
-  // CORE
-  { id: "curnls", type: "core", title: "CURNLS", pi: "Caroline Quach-Thanh", piInitials: "CQ", piColor: "#f4017f", status: "analysis", pillar: "Infectious Disease", summary: "Tracking COVID-19 immunity in children using leftover blood samples from emergency department visits.", what: "The proportion of children with antibodies to COVID-19 showing infection and/or vaccination; whether public health measures relate to immunity and virus transmission; and whether using leftover blood samples to study disease rates in children is feasible.", how: "When children visited the emergency department for any reason and had blood taken, we used their leftover blood to run tests comparing vaccine- and infection-based responses to COVID-19.", going: "The CURNLS database has been cleaned and locked, and analysis has begun — with a manuscript planned for 2026!" },
-  { id: "covid-cohort", type: "core", title: "COVID Cohort", pi: "Caroline Quach-Thanh", piInitials: "CQ", piColor: "#f4017f", status: "complete", pillar: "Infectious Disease", summary: "Following children and families through COVID-19 infection to understand short- and long-term health outcomes.", what: "The short and long-term outcomes of COVID-19 infection and vaccinations in children, including quality of life, mental health, and family impact.", how: "Families were enrolled when they visited the ED or hospital with COVID-19. We collected chart data and surveys at 4–5 time points over one year. An optional biobanking sub-study collected samples from patients with MIS-C, myocarditis, and pericarditis.", going: "Follow-up ended May 2025. The database is being cleaned and closed. Key lessons: multi-point retention is challenging, language barriers need more support, and flexible scheduling would help. Sub-analyses are in progress." },
-  { id: "indirect", type: "core", title: "Indirect Consequences", pi: "Matthew Carwana & Nadia Roumeliotis", piInitials: "MC", piColor: "#25a89e", status: "complete", pillar: "Inpatient", summary: "Documenting how pandemic restrictions harmed vulnerable children through delayed care, surging infections, and mental health strain.", what: "Whether hospitalizations for child maltreatment changed during the pandemic; patterns of lower respiratory tract infections; and how restrictions affected mental health of marginalized youth.", how: "We conducted national population-based studies on hospitalizations (2016–2023) and an ongoing qualitative study interviewing youth and caregivers at BC Children's Social Pediatrics Program.", going: "Published in CMAJ. Key finding: maltreatment hospitalizations dropped 30% early in the pandemic, then ICU admissions for maltreatment rose ~80%. LRTI fell up to 91% then surged 38% after restrictions lifted. When systems close, vulnerable children do not become safer." },
-  { id: "long-term", type: "core", title: "Long-Term Outcomes", pi: "Karen Choong", piInitials: "KC", piColor: "#f7a40b", status: "analysis", pillar: "Critical Care", summary: "Comparing long-term healthcare use and costs between children infected with COVID-19 vs. other respiratory viruses.", what: "Long-term healthcare utilization and costs among children who had COVID-19 compared to those with other respiratory viruses.", how: "Using national administrative health data from the Canadian Institute for Health Information (CIHI).", going: "CIHI data has been received and analysis is ongoing." },
-  { id: "amr", type: "core", title: "AMR Surveillance", pi: "Manish Sadarangani", piInitials: "MS", piColor: "#253587", status: "planning", pillar: "Infectious Disease", summary: "Establishing Canada's first nationwide pediatric antimicrobial resistance surveillance network.", what: "How widespread resistant bacterial infections are in children, who is at highest risk, and how to guide vaccine and treatment development.", how: "Collecting data on children seen in the ED or admitted with resistant bacterial infections, storing bacterial samples for future research.", going: "Protocol is complete. Working on obtaining necessary approvals at hospital sites before sample collection begins!" },
-  { id: "butter", type: "core", title: "BUTTER", pi: "Shelly Bolotin", piInitials: "SB", piColor: "#f7a40b", status: "planning", pillar: "Infectious Disease", summary: "Biobanking leftover blood from children's ED visits to track emerging infections and immunity over time.", what: "How emerging and pandemic infections affect children: how widely they spread, how severe they are, and how immunity develops.", how: "Collecting and biobanking residual blood samples from children aged 0–17 presenting to EDs, taken only from blood already drawn for routine care.", going: "Protocol is complete. Working on obtaining necessary approvals at hospital sites!" },
-  { id: "maize", type: "core", title: "MAIZE", pi: "Shelly Bolotin", piInitials: "SB", piColor: "#25a89e", status: "recruiting", pillar: "Infectious Disease", summary: "A national measles serosurvey using banked samples to help decision-makers predict and control outbreaks.", what: "Population immunity to measles in Canadian children, by age, vaccine eligibility, and geography — including oversampling in regions experiencing 2025 outbreaks.", how: "Testing up to 9,000 previously banked serum specimens from the CURNLS study (2023–2024) for measles antibodies.", going: "Protocol finalized. Public Health mandates received for Quebec and Ontario. Ethics approvals underway. CURNLS samples will be shipped to CHU Sainte-Justine for testing." },
-  { id: "snaccc", type: "core", title: "SNaCCC", pi: "Rishi Ganesan", piInitials: "RG", piColor: "#f4017f", status: "planning", pillar: "Critical Care", summary: "Investigating how often COVID-19 causes brain-related complications compared to other viruses in children.", what: "The frequency and types of brain-related complications in children infected with COVID-19 compared to those with other viruses.", how: "Using POPCORN COVID Cohort data to identify those with brain-related complications and collecting additional information from medical records.", going: "Protocol is currently under development." },
-  { id: "bobbi", type: "core", title: "BOBBi", pi: "Manish Sadarangani", piInitials: "MS", piColor: "#253587", status: "planning", pillar: "Infectious Disease", summary: "A UK–Canada randomized trial testing whether steroids improve survival in babies with bacterial meningitis.", what: "Whether giving dexamethasone to babies under 90 days with bacterial meningitis increases the number who survive without long-term difficulties.", how: "Recruiting 1,123 babies across the UK and Canada, randomly assigned to dexamethasone + antibiotics or antibiotics alone, followed to 24 months.", going: "Trial protocol nearing finalization. Regulatory and ethics submissions beginning soon. Recruitment in Canada anticipated to begin mid-2026." },
-  // KNOWLEDGE SYNTHESIS
-  { id: "bronchiolitis-sr", type: "synthesis", title: "Disparities in Bronchiolitis Care", pi: "Olivier Drouin", piInitials: "OD", piColor: "#f4017f", status: "manuscript", pillar: "Inpatient", summary: "A systematic review of how race, income, and language shape disparities in care for babies hospitalized with bronchiolitis.", what: "Whether differences in bronchiolitis care — tests, treatments, length of stay — are linked to a child's race/ethnicity, family income, or language.", how: "Screening research published since 2000 on babies under 2 hospitalized with bronchiolitis, looking at sociodemographic factors and low-value care use.", going: "Nearly 5,000 abstracts screened; 65 full-texts identified for inclusion. Now abstracting data for the forthcoming manuscript." },
-  { id: "discharge-sr", type: "synthesis", title: "Language & Discharge Practices", pi: "Victor Do", piInitials: "VD", piColor: "#25a89e", status: "manuscript", pillar: "Inpatient", summary: "A systematic review of hospital discharge strategies that improve outcomes for families with language and literacy barriers.", what: "How discharge interventions tailored to families' preferred language and health literacy influence understanding, confidence, and post-discharge outcomes.", how: "A systematic review following PRISMA guidelines, searching multiple databases, extracting data in duplicate, and synthesizing findings narratively.", going: "Review is being finalized. Beginning knowledge mobilization to share findings with clinicians and health system leaders." },
-  { id: "picu-lowvalue", type: "synthesis", title: "Low-Value Care in the PICU", pi: "Richard Webster", piInitials: "RW", piColor: "#f7a40b", status: "manuscript", pillar: "Critical Care", summary: "A scoping review of ways to reduce unnecessary tests and treatments in pediatric intensive care units.", what: "What works to reduce low-value care in the PICU, where the gaps are, and where new opportunities exist to improve care while reducing environmental impact.", how: "Reviewing past research on Choosing Wisely-aligned interventions, studying which reduced unnecessary care and what evidence supports them.", going: "Approaching completion of data extraction. An internal presentation at CHEO PICU is upcoming to engage knowledge users and inform local decarbonization priorities." },
-  { id: "cmv-sr", type: "synthesis", title: "CMV Screening in Pregnancy", pi: "Isabelle Boucoiran", piInitials: "IB", piColor: "#f4017f", status: "analysis", pillar: "Maternal Health", summary: "A systematic review comparing cytomegalovirus screening methods to find the best approach for prenatal care.", what: "The best way to check for CMV during pregnancy — comparing how well current tests work and how often they give positive results.", how: "Comparing different CMV screening methods through past research, to help design a larger national CMV screening study.", going: "All screening complete. Currently working on data abstraction for 120 included articles." },
-  // TRAINEE
-  { id: "expand", type: "trainee", title: "EXPAND", pi: "Mahak Arora", piInitials: "MA", piColor: "#f4017f", status: "planning", pillar: "Equity", summary: "Examining how race and ethnicity are linked to quality of life in Canadian children enrolled in POPCORN.", what: "The association between race/ethnicity and quality of life (PedsQL), including physical, social, emotional, and school functioning, and mental health outcomes.", how: "Analyses guided by POPCORN's EDI+I and Patient Engagement teams, working with the Data Pillar to determine sample sizes.", going: "Working with the Data Pillar to determine sample sizes and preparing the REB application." },
-  { id: "panziera", type: "trainee", title: "Post-COVID Condition Study", pi: "Sofia Panziera", piInitials: "SP", piColor: "#25a89e", status: "planning", pillar: "Infectious Disease", summary: "Tracking long-term outcomes, PASC trajectory, and family burden in children and youth after SARS-CoV-2.", what: "Long-term outcomes of SARS-CoV-2 positive and negative children and their families, including quality of life, fatigue, and mental health trajectory.", how: "Participants followed 9–12 months post-presentation with repeated assessments of HRQoL, fatigue, daily functioning, and caregiver outcomes.", going: "Analytic planning in progress — looking forward to sharing plans with POPCORN investigators soon!" },
-  { id: "sahnoun", type: "trainee", title: "COVID-19 Prediction Tool", pi: "Yesmine Sahnoun", piInitials: "YS", piColor: "#f7a40b", status: "planning", pillar: "Infectious Disease", summary: "Using classical statistics and machine learning to predict which children with COVID-19 are at risk of severe outcomes.", what: "Predictive factors associated with complications in patients diagnosed with COVID-19.", how: "Applying both traditional statistical methods and machine learning to develop and evaluate predictive models.", going: "Ethics protocol recently approved. Actively working on gaining access to the dataset." },
-  { id: "dichara", type: "trainee", title: "Pregnancy & Infancy Outcomes", pi: "Costanza Di Chara", piInitials: "CD", piColor: "#253587", status: "planning", pillar: "Maternal Health", summary: "Identifying early predictors of severe COVID-19 in infants to support risk stratification and clinical management.", what: "Early predictors of severe COVID-19 outcomes and longer-term quality of life in infants hospitalized for SARS-CoV-2.", how: "Leveraging existing POPCORN COVID-19 cohort data for predictive analyses of acute severity and long-term QoL.", going: "Statistical analysis plan finalized. Preparing for data extraction and implementation." },
-  { id: "guay-autoimmune", type: "trainee", title: "COVID-19 & Autoimmunity", pi: "Charles-Antoine Guay", piInitials: "CG", piColor: "#f4017f", status: "analysis", pillar: "Infectious Disease", summary: "Investigating whether COVID-19 infection raises the risk of autoimmune diseases in children beyond what other viruses cause.", what: "Whether the increase in autoimmune conditions after COVID-19 is higher than expected from other common infections, and whether vaccination reduces this risk.", how: "A Canadian population-based longitudinal study plus a cohort analysis using POPCORN data linked to health administrative data, with stratification by severity, variant, and vaccination status.", going: "Study protocol finalized. Access to Quebec health administrative data secured. Preparing data linkage between POPCORN cohort and health administrative databases." },
-  { id: "djiraimadje", type: "trainee", title: "Pediatric Cancer Diagnoses", pi: "Ngueyanouba Calvin Djiraimadje", piInitials: "ND", piColor: "#25a89e", status: "planning", pillar: "Inpatient", summary: "Examining changes in incidence and severity of new pediatric cancer diagnoses before, during, and after COVID-19.", what: "Changes in the incidence and hospital admission severity of newly diagnosed pediatric cancers across Canada, with a focus on ICU admissions as a marker of delayed diagnosis.", how: "Using CIHI data to assess trends in presentation severity across the pandemic timeline.", going: "Currently developing the study protocol, defining key variables, and preparing for data access." },
-  // AFFILIATED
-  { id: "carebest", type: "affiliated", title: "CareBEST", pi: "Olivier Drouin", piInitials: "OD", piColor: "#f4017f", status: "recruiting", pillar: "Inpatient", summary: "Measuring low-value care variation in children hospitalized with bronchiolitis across multiple Canadian centres.", what: "The use of 6 low-value healthcare services in children aged 1–12 months hospitalized with bronchiolitis, and how this differs across patients, doctors, and hospitals.", how: "Collecting chart data on care received, parent questionnaires on family characteristics and experiences, and 30-day follow-up questionnaires.", going: "We are in our last season of participant recruitment!" },
-  { id: "gram-positive", type: "affiliated", title: "Gram-Positive Cocci Infections", pi: "Shaun Morris & Jesse Papenburg", piInitials: "SM", piColor: "#25a89e", status: "analysis", pillar: "Infectious Disease", summary: "Describing incidence, risk factors, and outcomes of invasive Group A Streptococcus and Staph aureus infections in hospitalized children.", what: "Incidence, risk factors, clinical features, and outcomes in children hospitalized with iGAS and SAB infections.", how: "Collecting data from medical records of children diagnosed with SAB or iGAS across POPCORN sites.", going: "Most sites have completed data collection. Awaiting finalization of data transfer agreements." },
-  { id: "cannabis", type: "affiliated", title: "Cannabis & Prenatal Exposure", pi: "Annie Ouellet", piInitials: "AO", piColor: "#f7a40b", status: "analysis", pillar: "Maternal Health", summary: "Studying how prenatal cannabis, antidepressants, or maternal depression affect a baby's emotional regulation at 6 months.", what: "Whether prenatal exposure to cannabis or antidepressants, and maternal depression, affects a baby's ability to regulate emotions — and how the post-birth home environment influences outcomes.", how: "Following over 400 babies from prenatal to about 6 months, comparing exposed and non-exposed groups using observation of emotional responses.", going: "Working with expert teams to develop video validation and coding to assess babies' emotions." },
-  { id: "watelle", type: "affiliated", title: "Research Readiness Pilot", pi: "Laurence Watelle", piInitials: "LW", piColor: "#253587", status: "planning", pillar: "Data", summary: "Creating a simple system in pediatric clinics to collect patient-reported data and build a registry of families open to research.", what: "How to routinely collect children's and families' health reports during clinic visits and ask if they're open to being contacted for research.", how: "Consulting clinicians, patients, ethics experts, and hospital staff; designing a user-friendly web tool; exploring integration with electronic medical records.", going: "System for sending information to doctors still being developed. Patient and physician enrollment expected to begin spring 2026." },
-  { id: "presto", type: "affiliated", title: "PRESTO", pi: "Jeffrey (Des) Pernica", piInitials: "JP", piColor: "#f4017f", status: "recruiting", pillar: "Inpatient", summary: "A feasibility study testing two approaches to improve diagnosis and antibiotic use in children hospitalized with pneumonia.", what: "Whether two future larger multi-centre studies are feasible: one testing a blood marker to guide antibiotic decisions, another comparing antibiotic durations in severe pneumonia.", how: "Testing both approaches at McMaster, London Health Sciences, and SickKids, tracking recovery and watching for problems.", going: "Enrolling at McMaster and about to begin at London Health Sciences. Enrolment is going well, and caregivers are happy with study procedures." },
+  // ── CORE ──────────────────────────────────────────────────────────────────
+  {
+    id: "curnls", type: "core",
+    title: "CURNLS", pi: "Caroline Quach-Thanh", piInitials: "CQ", piColor: "#f4017f",
+    status: "analysis", pillar: "Infectious Disease",
+    summary: "Tracking COVID-19 immunity in children using leftover blood samples from emergency department visits.",
+    what: "1. The proportion of children with antibodies to COVID-19 that show infection and/or vaccination.\n2. If there is a relationship between public health measures, infection, and immunity to virus transmission, vaccination rates, and severe COVID-19 cases.\n3. If a project that uses leftover blood samples to study the rates of other diseases in children works.",
+    how: "When children visit the emergency department for any reason and have their blood taken, we used their leftover blood to run tests. The tests let us compare the vaccine and infection-based responses to COVID-19.",
+    going: "CURNLS database has been cleaned and locked, and analysis has begun with a plan for a manuscript to be drafted in 2026!",
+  },
+  {
+    id: "covid-cohort", type: "core",
+    title: "COVID Cohort", pi: "Caroline Quach-Thanh", piInitials: "CQ", piColor: "#f4017f",
+    status: "complete", pillar: "Infectious Disease",
+    summary: "Following children and families through COVID-19 infection to understand short- and long-term health outcomes.",
+    what: "The short and long-term outcomes of the COVID-19 infection and vaccinations in children.",
+    how: "We asked families to join the study when they came to the emergency department or hospital with a COVID-19 infection. Information was then collected from their medical chart, and families filled out questionnaires about their health, quality of life, and mental health 4-5 times over one year.\n\nAn optional biobanking sub-study was also part of this project. In this study, blood samples were collected from patients with confirmed MIS-C, myocarditis, and pericarditis following COVID-19 vaccination or infection, as well as from controls. These samples can be used by future researchers in national and international research into the causes and risk factors of adverse events following vaccination and MIS-C.",
+    going: "Follow up for the COVID-19 Prospective Cohort Study ended in May 2025. Since then, we have been working to clean and close the database. Data from this project will support a variety of in-progress projects. As the study came to an end, we also reflected on lessons learned from the past few years. Feedback from parents/caregivers and research teams provided valuable insights into factors that affect recruitment, retention, and participant experience in pediatric research. Some key lessons include: maintaining engagement over multiple follow-up time points was challenging for research teams; caregivers were more likely to ask about the purpose of the study during later follow-ups; recruitment for the biobanking sub-study was challenging due to scheduling conflicts; and language barriers were identified at several sites, highlighting the need for more accessible study materials.",
+  },
+  {
+    id: "indirect", type: "core",
+    title: "Indirect Consequences", pi: "Matthew Carwana & Nadia Roumeliotis", piInitials: "MC", piColor: "#25a89e",
+    status: "complete", pillar: "Inpatient",
+    summary: "Documenting how pandemic restrictions harmed vulnerable children through delayed care, surging infections, and mental health strain.",
+    what: "The indirect consequences of COVID-19 measures on children and youth in Canada, including: 1) whether hospitalizations for child maltreatment among children under 2 changed during the pandemic, and whether cases became more severe; 2) the patterns of lower respiratory tract infections such as bronchiolitis and pneumonia and predictors of admissions to pediatric tertiary care and ICU; 3) how pandemic restrictions affected the mental health, healthcare access, and daily lives of youth and caregivers experiencing structural marginalization.",
+    how: "We conducted: 1) a national population-based study examining hospitalizations for child maltreatment among children under 2 years (2016–2023), including ICU admissions, published in the Canadian Medical Association Journal; 2) a national population-based study examining hospitalizations for lower respiratory tract infection amongst children under 17 years (2016–2023); 3) an ongoing qualitative study interviewing youth and caregivers connected to BC Children's Social Pediatrics Program to understand how pandemic restrictions affected mental health, healthcare access, and daily life among structurally marginalized families.",
+    going: "Published in CMAJ. Key findings: hospitalizations for child maltreatment dropped approximately 30% early in the pandemic, then returned to pre-pandemic levels. ICU admissions for maltreatment increased approximately 80% after the early pandemic period, suggesting some cases were identified later when more severe. The epidemiology of LRTI hospitalisations in Canada were impacted by the onset of the COVID-19 pandemic — an immediate reduction (up to 91%) was followed by an unanticipated large increase (38%) in hospitalisations in 2022–2023, off season, after NPIs were reduced. These findings show that when systems close, vulnerable children do not become safer. Future emergency planning must protect access to care, preserve early detection pathways, and prioritize equity from the outset.",
+  },
+  {
+    id: "long-term", type: "core",
+    title: "Long-Term Outcomes", pi: "Karen Choong", piInitials: "KC", piColor: "#f7a40b",
+    status: "analysis", pillar: "Critical Care",
+    summary: "Comparing long-term healthcare use and costs between children infected with COVID-19 vs. other respiratory viruses.",
+    what: "This study is exploring the long-term healthcare utilization and healthcare costs among children who were infected with COVID-19, compared to children infected with other respiratory viruses.",
+    how: "This study is underway and will use information from national administrative health database from the Canadian Institute for Health Information (CIHI).",
+    going: "CIHI data has been received and analysis is ongoing.",
+  },
+  {
+    id: "amr", type: "core",
+    title: "AMR Surveillance", pi: "Manish Sadarangani", piInitials: "MS", piColor: "#253587",
+    status: "planning", pillar: "Infectious Disease",
+    summary: "Establishing Canada's first nationwide pediatric antimicrobial resistance surveillance network.",
+    what: "Antimicrobial resistance (AMR) is a growing global health crisis that makes infections harder to treat, leading to longer hospital stays, higher medical costs, and greater deaths. In humans, the burden of AMR infections falls disproportionately on children and yet there is no national program in Canada that tracks the impact of AMR specifically in pediatric populations. CAN-POP-AMR aims to fill this critical gap by establishing the first nationwide pediatric-specific AMR surveillance network. This research will help us understand how widespread these infections are in children, identify high-risk groups, and guide the development of vaccines and new treatments.",
+    how: "We will collect data on children seen in the emergency department or admitted to hospital with resistant bacterial infections, as well as those with selected antibiotic-susceptible infections for comparison. We will gather detailed information on the types of bacteria involved, their resistance patterns, and patient outcomes. Additionally, bacterial samples will be collected and stored for future research, enabling us to study how bacteria evolve and develop resistance, and support development of vaccines and other interventions.",
+    going: "The protocol is complete and we are working on obtaining the necessary approvals at the hospital sites so that sample collection can begin!",
+  },
+  {
+    id: "butter", type: "core",
+    title: "BUTTER", pi: "Shelly Bolotin", piInitials: "SB", piColor: "#f7a40b",
+    status: "planning", pillar: "Infectious Disease",
+    summary: "Biobanking leftover blood from children's ED visits to track emerging infections and immunity over time.",
+    what: "We want to better understand how emerging and pandemic infections affect children, including how widely these infections spread, how severe they are, and how immunity develops over time. This information can help clarify the role children play in community transmission, support predictions about future infection trends, and inform public health decisions such as prevention measures, vaccination, and booster strategies.",
+    how: "We are collecting and biobanking leftover (residual) blood samples from children aged 0–17 years who present to participating emergency departments, regardless of their reason for the visit. These samples are taken only from blood already drawn as part of routine clinical care, so no additional blood collection is required. Basic demographic information will also be recorded.",
+    going: "The protocol is complete and we are working on obtaining the necessary approvals at the hospital sites so that sample collection can begin!",
+  },
+  {
+    id: "maize", type: "core",
+    title: "MAIZE", pi: "Shelly Bolotin", piInitials: "SB", piColor: "#25a89e",
+    status: "recruiting", pillar: "Infectious Disease",
+    summary: "A national measles serosurvey using banked samples to help decision-makers predict and control outbreaks.",
+    what: "The aim of the MAIZE study is to support federal, provincial, and territorial decision-makers with information to predict, mitigate, and control measles in Canada by conducting a measles retrospective serosurvey. The objectives of this project are: 1) Assess population immunity in Canadian children to measles overall, and by demographic characteristics, including age, vaccine eligibility, and geography. 2) Explore over-sampling in geographical regions that are experiencing measles outbreaks in 2025 to understand the utility of specimens collected by POPCORN to inform on population immunity at sub-provincial levels.",
+    how: "In the MAIZE study we are conducting a national pediatric serosurvey, leveraging serum specimens previously collected through the POPCORN network in CURNLS study, which were collected in 2023-2024 to assess COVID-19 seroprevalence. We will test up to 9000 of these previously banked serum or plasma specimens.",
+    going: "The protocol has been finalized. We have received the Public Health mandate for Quebec and Ontario for doing serosurvey and the ethical approvals are underway. The CURNLS samples will be shipped to CHU Sainte-Justine for testing.",
+  },
+  {
+    id: "snaccc", type: "core",
+    title: "SNaCCC", pi: "Rishi Ganesan", piInitials: "RG", piColor: "#f4017f",
+    status: "planning", pillar: "Critical Care",
+    summary: "Investigating how often COVID-19 causes brain-related complications compared to other viruses in children.",
+    what: "How frequently and what brain-related complications occur in children who were infected with COVID-19 compared to children infected with other viruses than COVID-19.",
+    how: "We will be using data collected from the POPCORN COVID Cohort Study to identify those with brain-related complications. We will then collect additional information regarding their clinical presentation, brain imaging and other complications from patient medical records.",
+    going: "The protocol is currently under development.",
+  },
+  {
+    id: "bobbi", type: "core",
+    title: "BOBBi", pi: "Manish Sadarangani", piInitials: "MS", piColor: "#253587",
+    status: "planning", pillar: "Infectious Disease",
+    summary: "A UK–Canada randomized trial testing whether steroids improve survival in babies with bacterial meningitis.",
+    what: "Bacterial meningitis is a serious infection that affects approximately 150–300 Canadian infants under 90 days of age each year. In older children, dexamethasone (a steroid) is recommended alongside antibiotics to improve outcomes. However, there is currently no high-quality evidence to guide its use in young infants. The BOBBi trial aims to determine whether giving dexamethasone to babies with suspected bacterial meningitis increases the number who survive without long-term difficulties. Across the UK and Canada, BOBBi will recruit 1,123 babies over approximately four and a half years. The main outcome we are studying is survival without moderate or severe neurodevelopmental impairment at 24 months of age (corrected for prematurity).",
+    how: "We will recruit babies up to 90 days of age who doctors think may have bacterial meningitis. Babies will be randomly assigned to one of two groups: one group will receive dexamethasone in addition to usual antibiotic treatment, the other group will receive usual antibiotic treatment alone. Because meningitis in young babies can have long-term effects, we will follow babies until they are 24 months old (corrected for prematurity). Parents will be asked to complete questionnaires at hospital discharge and at follow-up time points. We will also review medical records to understand each baby's health, development, hearing, vision, and neurological outcomes.",
+    going: "The trial protocol is nearing finalization. Regulatory and ethics submissions will begin shortly. Study start-up activities are underway, with recruitment in Canada anticipated to begin in mid-2026.",
+  },
+
+  // ── KNOWLEDGE SYNTHESIS ───────────────────────────────────────────────────
+  {
+    id: "bronchiolitis-sr", type: "synthesis",
+    title: "Disparities in Bronchiolitis Care", pi: "Olivier Drouin", piInitials: "OD", piColor: "#f4017f",
+    status: "manuscript", pillar: "Inpatient",
+    summary: "A systematic review of how race, income, and language shape disparities in care for babies hospitalized with bronchiolitis.",
+    what: "Bronchiolitis is one of the most common reasons babies and young children are hospitalized. While national guidelines recommend simple, supportive care, some hospitals still use tests and treatments that don't help. These differences in care can mean that some children get extra or unnecessary care compared to others, which means they might spend more time in the hospital than they should. By looking at past research, we want to find out if these differences in care are linked to things like a child's race or ethnicity, family income, or language spoken by the family. We will look at how these factors relate to how long children stay in the hospital, if they need intensive care, or if they have other health problems.",
+    how: "By looking at research papers published since the year 2000, we are studying babies under 2 years old who were hospitalized with bronchiolitis. We will look at data about each child's background and care to see how often low-value tests or treatments are used.",
+    going: "We have screened nearly 5000 abstracts, yielding 65 full-texts that will be included in our forthcoming manuscript. Our next steps are abstracting the relevant data from those 65 full-texts, which will allow us to synthesize the ways in which sociodemographic characteristics and markers of structural inequities may contribute to low-value care in children hospitalized with bronchiolitis.",
+  },
+  {
+    id: "discharge-sr", type: "synthesis",
+    title: "Language & Discharge Practices", pi: "Victor Do", piInitials: "VD", piColor: "#25a89e",
+    status: "manuscript", pillar: "Inpatient",
+    summary: "A systematic review of hospital discharge strategies that improve outcomes for families with language and literacy barriers.",
+    what: "We sought to understand how pediatric inpatient discharge interventions tailored to families' preferred language and health literacy influence caregiver understanding, confidence, and post-discharge outcomes, and to identify which strategies most effectively support equitable transitions from hospital to home.",
+    how: "We conducted a systematic review following PRISMA guidelines, searching multiple databases and trial registries, applying predefined inclusion criteria, extracting data in duplicate, assessing risk of bias, and synthesizing findings narratively due to study heterogeneity.",
+    going: "We are finalizing the review and beginning knowledge mobilization to share findings with clinicians, health system leaders, and researchers to inform equitable discharge practice and future research.",
+  },
+  {
+    id: "picu-lowvalue", type: "synthesis",
+    title: "Low-Value Care in the PICU", pi: "Richard Webster", piInitials: "RW", piColor: "#f7a40b",
+    status: "manuscript", pillar: "Critical Care",
+    summary: "A scoping review of ways to reduce unnecessary tests and treatments in pediatric intensive care units.",
+    what: "Sometimes, children in intensive care get tests or treatments that don't help. This project studies ways to reduce this unnecessary care. We want to review research on what works, see where there are gaps, and identify new opportunities to improve care. This work aims to help reduce unnecessary tests and treatments in the health system while still giving the best care to seriously ill children and youth. Making healthcare more efficient can also lower its environmental impact and save money.",
+    how: "By looking at past research, we are studying actions that reduce unnecessary care, like those recommended by Choosing Wisely. We are looking at: which Choosing Wisely recommendations already have studies showing ways to put them into practice; new areas where research could help improve care; which actions helped children and made care better; how the interventions were done, the type of study, and how strong the evidence is; and gaps where more work is needed.",
+    going: "This project is approaching completion of data extraction. In the coming weeks, there will be an internal presentation on this work to the local CHEO PICU to encourage healthcare provider knowledge users to engage with this evidence synthesis, to inform selection of local decarbonization project priorities.",
+  },
+  {
+    id: "cmv-sr", type: "synthesis",
+    title: "CMV Screening in Pregnancy", pi: "Isabelle Boucoiran", piInitials: "IB", piColor: "#f4017f",
+    status: "analysis", pillar: "Maternal Health",
+    summary: "A systematic review comparing cytomegalovirus screening methods to find the best approach for prenatal care.",
+    what: "This project is exploring the best way to check for cytomegalovirus (CMV) during pregnancy. CMV is a common virus, and it can sometimes affect a baby's health before birth. We are looking at past research to see how well current CMV tests work and how often they show a positive result.",
+    how: "By looking at past research papers, we are comparing different ways to screen for CMV to find out which method works best. The results will help healthcare providers and hospitals choose the most effective approach for prenatal care. The results will also help design a larger study to see how CMV screening could be offered to all pregnant people in Canada.",
+    going: "All screening for the project is complete. We are currently working on data abstraction for the 120 articles that will be included in the review.",
+  },
+
+  // ── STUDENT & POST-DOC AWARDS ─────────────────────────────────────────────
+  {
+    id: "expand", type: "trainee",
+    title: "EXPAND", pi: "Mahak Arora", piInitials: "MA", piColor: "#f4017f",
+    status: "planning", pillar: "Equity",
+    summary: "Examining how race and ethnicity are linked to quality of life in Canadian children enrolled in POPCORN.",
+    what: "EXPAND (EXamining associations between Pediatric quality of life (PedsQL) and sociodemographic chAracteristics of childreN in CanaDa) aims to estimate the association between race and ethnicity and quality of life (PedsQL total score). Secondary objectives include estimating the association between race and ethnicity and QoL subscales (physical, social, emotional, and school functioning) and mental health outcomes (e.g., anxiety, depression scores).",
+    how: "Analyses will be guided by POPCORN Equity, Diversity, Inclusion + Indigeneity (EDI+I) and Patient Engagement (PE) teams.",
+    going: "We are working with the Data Pillar to ascertain sample sizes for analyses and submitting an REB application for the project.",
+  },
+  {
+    id: "panziera", type: "trainee",
+    title: "Post-COVID Condition Study", pi: "Sofia Panziera", piInitials: "SP", piColor: "#25a89e",
+    status: "planning", pillar: "Infectious Disease",
+    summary: "Tracking long-term outcomes, PASC trajectory, and family burden in children and youth after SARS-CoV-2.",
+    what: "We are analyzing the long-term outcomes of SARS-CoV-2 positive and negative children and youth, and their families.",
+    how: "Participants were followed for up to 9-12 months post-presentation, using repeated assessments to evaluate changes in health-related quality of life, fatigue, daily functioning, and mental health. Caregiver outcomes are being examined, including family functioning and caregiver burden, and we are estimating the trajectory of post-acute sequelae of SARS-CoV-2 infection (PASC).",
+    going: "Analytic planning is in progress, and we are looking forward to sharing these plans with POPCORN investigators soon!",
+  },
+  {
+    id: "sahnoun", type: "trainee",
+    title: "COVID-19 Prediction Tool", pi: "Yesmine Sahnoun", piInitials: "YS", piColor: "#f7a40b",
+    status: "planning", pillar: "Infectious Disease",
+    summary: "Using classical statistics and machine learning to predict which children with COVID-19 are at risk of severe outcomes.",
+    what: "Our objective is to identify predictive factors associated with complications in patients diagnosed with COVID-19.",
+    how: "We plan to apply both traditional statistical methods and machine learning approaches to develop and evaluate predictive models.",
+    going: "Our ethics protocol was recently approved, and we are actively working on getting access to the dataset.",
+  },
+  {
+    id: "dichara", type: "trainee",
+    title: "Expanding POPCORN to Pregnant Individual–Infant Health", pi: "Costanza Di Chara", piInitials: "CD", piColor: "#253587",
+    status: "planning", pillar: "Maternal Health",
+    summary: "Identifying early predictors of severe COVID-19 in infants to support risk stratification and clinical management.",
+    what: "We aim to identify early predictors of severe COVID-19 outcomes and longer-term impacts on quality of life in infants hospitalized for SARS-CoV-2 infection, to support risk stratification and inform clinical management and follow-up.",
+    how: "We are leveraging existing POPCORN COVID-19 prospective cohort data to conduct predictive analyses of acute severity and long-term quality of life, using clinically relevant baseline and hospitalization features.",
+    going: "The statistical analysis plan has been finalized, including both acute and long-term predictive analyses, and we are now preparing for data extraction and implementation.",
+  },
+  {
+    id: "guay-autoimmune", type: "trainee",
+    title: "Pandemic and Autoimmunity", pi: "Charles-Antoine Guay", piInitials: "CG", piColor: "#f4017f",
+    status: "analysis", pillar: "Infectious Disease",
+    summary: "Investigating whether COVID-19 infection raises the risk of autoimmune diseases in children beyond what other viruses cause.",
+    what: "Several studies have suggested a link between COVID-19 infection and autoimmune manifestations, particularly in children. With this study, we want to know whether the reported increase in autoimmune conditions following COVID-19 infection is higher than what would normally be expected after other common viral infections (such as influenza and respiratory syncytial virus). We also seek to assess whether vaccination reduces the risk of developing these complications.",
+    how: "First, a Canadian population-based longitudinal study will be conducted using health administrative data to assess trends in autoimmune diseases in children. Second, a longitudinal cohort analysis will be conducted using data from the POPCORN COVID cohort study, linked to Canadian health administrative data, to evaluate the association between laboratory-confirmed symptomatic COVID-19 infection and the risk of developing a new autoimmune disease. Finally, a complementary analysis will be undertaken using population-based health administrative data, which will allow stratified analyses according to disease severity, variant involved, and vaccination status.",
+    going: "We have finalized the study protocol and successfully obtained access to Quebec health administrative data. We are currently updating the Canadian health administrative data to ensure it is complete. At the same time, we are preparing the data linkage process between the POPCORN cohort and health administrative databases, which will be completed before submitting the project to the ethics committee.",
+  },
+  {
+    id: "djiraimadje", type: "trainee",
+    title: "Incidence and Severity of New Cancer Diagnoses in Children Across Canada", pi: "Ngueyanouba Calvin Djiraimadje", piInitials: "ND", piColor: "#25a89e",
+    status: "planning", pillar: "Inpatient",
+    summary: "Examining changes in incidence and severity of new pediatric cancer diagnoses before, during, and after COVID-19.",
+    what: "This project examines changes in the incidence and severity of hospital admissions for newly diagnosed pediatric cancers in Canada before, during, and after the COVID-19 pandemic.",
+    how: "Using CIHI data, we aim to assess trends in presentation severity, with a particular focus on intensive care unit admissions as a marker of delayed or more severe diagnosis.",
+    going: "We are currently in the process of developing the study protocol, defining key variables, and preparing for data access and subsequent analyses.",
+  },
+
+  // ── AFFILIATED PROJECTS ───────────────────────────────────────────────────
+  {
+    id: "carebest", type: "affiliated",
+    title: "CareBEST", pi: "Olivier Drouin", piInitials: "OD", piColor: "#f4017f",
+    status: "recruiting", pillar: "Inpatient",
+    summary: "Measuring low-value care variation in children hospitalized with bronchiolitis across multiple Canadian centres.",
+    what: "Low-value care is defined as the use of a health service, such as treatments and investigations, for which the harm or cost outweighs the benefits. We are studying the use of 6 low-value healthcare services in children aged 1 to 12 months hospitalized with bronchiolitis to better understand the use of low-value care, and how this differs between different patients, doctors, and hospitals.",
+    how: "We are collecting data from medical charts on the care and treatments patients received while admitted for bronchiolitis. We are also collecting questionnaire data from parents to know more about the family's characteristics, their perspectives and experiences with the care received for bronchiolitis, and a follow-up questionnaire that will help us know if additional visits to the hospital happened in the 30 days after a child's discharge.",
+    going: "We are in our last season of participant recruitment!",
+  },
+  {
+    id: "gram-positive", type: "affiliated",
+    title: "Gram-Positive Cocci Infections", pi: "Shaun Morris & Jesse Papenburg", piInitials: "SM", piColor: "#25a89e",
+    status: "analysis", pillar: "Infectious Disease",
+    summary: "Describing incidence, risk factors, and outcomes of invasive Group A Streptococcus and Staph aureus infections in hospitalized children.",
+    what: "We want to describe the incidence, risk factors, clinical features, and outcomes in children hospitalized with invasive Group A Streptococcus (iGAS) infections and Staphylococcus aureus bloodstream (SAB) infections. The study aims to gain a better understanding of who gets these infections, how they present, how they're managed, and why some kids get sicker than others.",
+    how: "By collecting data from medical records of children with a diagnosis of SAB or iGAS.",
+    going: "Most sites have completed data collection. We are currently awaiting the finalization of data transfer agreements to enable the secure transfer of data from local sites to the POPCORN Data Centre.",
+  },
+  {
+    id: "cannabis", type: "affiliated",
+    title: "Prenatal Exposure to Cannabis, Antidepressants, Or Maternal Depression", pi: "Annie Ouellet", piInitials: "AO", piColor: "#f7a40b",
+    status: "analysis", pillar: "Maternal Health",
+    summary: "Studying how prenatal cannabis, antidepressants, or maternal depression affect a baby's emotional regulation at 6 months.",
+    what: "This project examines whether exposure to cannabis or antidepressants during pregnancy, as well as maternal depression, affects a baby's ability to regulate emotions at 6 months of age. It also looks at whether the post-birth home environment, including parental mental health and bonding, can influence these outcomes.",
+    how: "This study follows over 400 babies from prenatal to about 6 months of age. We are comparing babies exposed before birth to cannabis, antidepressants, or maternal depression with those who were not exposed. We observe how babies respond to emotional situations and examine whether the home environment after birth influences these effects.",
+    going: "We are working with expert teams to develop video validation and coding for the project that will be used to assess the babies' emotions.",
+  },
+  {
+    id: "watelle", type: "affiliated",
+    title: "Research Preparedness, Access and Patient Reported Outcome Collection", pi: "Laurence Watelle", piInitials: "LW", piColor: "#253587",
+    status: "planning", pillar: "Data",
+    summary: "Creating a simple system in pediatric clinics to collect patient-reported data and build a registry of families open to research.",
+    what: "This project aims to make it easier to routinely collect children's and families' own reports about their health during clinic visits and to ask if they are open to being contacted for research. The goal is to create a simple system in pediatric clinics that improves patient-reported data and builds a registry of families willing to participate in future studies.",
+    how: "This project focuses on planning how to add a simple research consent process into routine pediatric clinic visits without disrupting care. We will consult clinicians, patients, ethics experts, and hospital staff, design a user-friendly web tool, explore integration with electronic medical records, and gather feedback to prepare for a pilot launch.",
+    going: "The system for sending information to doctors is still being developed. Patient and physician enrollment is expected to begin in spring 2026, with the goal of completing all questionnaires by fall 2026.",
+  },
+  {
+    id: "presto", type: "affiliated",
+    title: "PRESTO", pi: "Jeffrey (Des) Pernica", piInitials: "JP", piColor: "#f4017f",
+    status: "recruiting", pillar: "Inpatient",
+    summary: "A feasibility study testing two approaches to improve diagnosis and antibiotic use in children hospitalized with pneumonia.",
+    what: "This project is a small test study to see if two larger studies would be possible in the future. The larger studies would take place at multiple hospitals and would compare two different ways of improving care for children admitted to hospital with pneumonia. Because this is only a test study, the main focus is on whether the study can be carried out smoothly, rather than on health results. Any health outcomes will be looked at as additional information.",
+    how: "This study tests two different ways to improve the way children hospitalized with pneumonia are diagnosed and treated. One is a blood test that helps physicians decide better whether antibiotics are needed at all for a given child with pneumonia. The other is looking to see what the best duration of antibiotics is to give children with severe pneumonia. For both, researchers track the children's recovery and watch for any problems.",
+    going: "We have been enrolling at McMaster Children's Hospital for some time and are about to begin at London Health Sciences Centre, with SickKids to be added in future. Enrolment is going quite well, and caregivers are happy with study procedures.",
+  },
+  {
+    id: "sic-network", type: "affiliated",
+    title: "SIC Network Collaboration", pi: "Karina Top & Juthaporn Cowan", piInitials: "KT", piColor: "#253587",
+    status: "complete", pillar: "Infectious Disease",
+    summary: "Three publications on safely revaccinating patients who experienced adverse events after COVID-19 vaccination.",
+    what: "One of POPCORN's collaborating networks, the Special Immunization Clinic (SIC) Network, recently published three articles on their experience revaccinating patients with adverse events after COVID-19 vaccination.",
+    how: "The SIC Network, co-led by Dr. Karina Top and Dr. Juthaporn Cowan, was established in 2013 to improve immunization practices for patients who had experienced adverse events following immunization (AEFI) and those who have medical conditions that may affect their response to immunizations. The SIC Network collaborated with POPCORN on the COVID-19 Prospective Cohort Study and continues to provide expertise in relation to Vaccine Safety.",
+    going: "Publications: 1) Neurological adverse events following COVID-19 vaccination among Canadians referred to the special immunization clinic network (Fitzpatrick et al., 2025). 2) Revaccination of individuals with cardiac adverse events following COVID-19 vaccination: A Canadian Immunization Research Network study (Piché-Renaud et al., 2025). 3) Revaccination outcomes among adolescents and adults with suspected hypersensitivity reactions following COVID-19 vaccination (Fitzpatrick et al., 2024). Overall, these articles report that in general, people who have had adverse events after COVID-19 vaccination can safely receive subsequent vaccination doses.",
+  },
 ];
 
 // ─── PATIENT ENGAGEMENT ───────────────────────────────────────────────────────
 
 export const PE_SESSIONS = [
-  { number: 1, title: "DeConstructing Patient Engagement", speakers: ["Isra Amsdr", "Amanda St.Dennis"], aim: "To 'deconstruct' previous methods of patient engagement by utilizing anonymous stories from patient and family partners – highlighting both the positives and the negatives." },
-  { number: 2, title: "ReThinking PE Communication", speakers: ["Abby McCluskey", "Anne Marie Portelli"], aim: "Explore how communication between researchers and patient and family partners can be used as a tool for effective patient engagement." },
-  { number: 3, title: "ReConstructing Patient Engagement", speakers: ["Cedar Davidson", "Sarah Mooney", "Suzanne Deliscar", "Amanda Doherty Kirby", "Becky Conia"], aim: "Explore practical tools and strategies to strengthen patient engagement in research and apply key considerations for developing an effective engagement plan." },
+  {
+    number: 1,
+    title: "DeConstructing Patient Engagement",
+    speakers: ["Isra Amsdr", "Amanda St.Dennis"],
+    aim: "To \"deconstruct\" previous methods of patient engagement by utilizing anonymous stories from patient and family partners – highlighting both the positives and negatives.",
+  },
+  {
+    number: 2,
+    title: "ReThinking PE Communication",
+    speakers: ["Abby McCluskey", "Anne Marie Portelli"],
+    aim: "Explore how communication between researchers and patient and family partners can be used as a tool for effective patient engagement.",
+  },
+  {
+    number: 3,
+    title: "ReConstructing Patient Engagement",
+    speakers: ["Cedar Davidson", "Sarah Mooney", "Suzanne Deliscar", "Amanda Doherty Kirby", "Becky Conia"],
+    aim: "Explore practical tools and strategies to strengthen patient engagement in research and apply key considerations for developing an effective engagement plan.",
+  },
 ] as const;
 
 // ─── EDI PROJECTS ─────────────────────────────────────────────────────────────
@@ -118,7 +337,7 @@ export const EDI_PROJECTS = [
     leads: ["Amy Shawanda", "Patricia Li"],
     supervisors: [],
     body: "Network members are co-applicants on a newly funded CIHR Team Grant (2025–2030) titled Empowering Voices, Shaping Futures: Co-designing and Co-implementing a Toolkit with Youth from Indigenous and Diverse Backgrounds for Culturally Safe Engagement in Research. This national initiative brings together researchers, youth partners, caregivers, and community collaborators to co-develop and implement a toolkit that supports culturally safe and meaningful youth engagement in health research.",
-    finding: "The project is co-led by principal applicants Amy Shawanda and Patricia Li and includes POPCORN youth and parent partners: Sarah Mooney, Sunny Dong, Becky Conia, and Robert Chin-See, along with community partners and multidisciplinary researchers from across Canada. The initiative will advance reconciliation by centering Indigenous youth perspectives in research.",
+    finding: "The project is co-led by principal applicants Amy Shawanda and Patricia Li and includes a diverse team of collaborators, including POPCORN youth and parent partners: Sarah Mooney, Sunny Dong, Becky Conia, and Robert Chin-See, along with community partners and multidisciplinary researchers from across Canada. The initiative will advance reconciliation by centering Indigenous youth perspectives in research and building capacity among youth from Indigenous and diverse backgrounds to lead research and advocacy aimed at improving healthcare experiences and outcomes.",
   },
   {
     title: "Language Inclusivity in Pediatric Research Co-Learning Session",
@@ -132,26 +351,45 @@ export const EDI_PROJECTS = [
 // ─── ECR VOICES ───────────────────────────────────────────────────────────────
 
 export const ECR_VOICES = [
-  { name: "Dr. Peter Gill", role: "Clinician-Researcher", initials: "PG", color: "#253587", quote: "Being part of the POPCORN network has advanced my professional development and provided numerous career opportunities. POPCORN's structure as a pan-Canadian research platform has facilitated collaboration with leading investigators, clinicians, and patient partners across multiple sites, research pillars, and disciplines. The network's commitment to mentorship and growth has accelerated my capacity to lead and contribute meaningfully to national research programs." },
-  { name: "Dr. Charles-Antoine Guay", role: "Postdoctoral Trainee & Specialist in Public Health and Preventive Medicine", initials: "CG", color: "#f4017f", quote: "Being part of the POPCORN research network as a postdoctoral trainee is an enriching opportunity that allows me to acquire the tools necessary to launch my research program autonomously. I've had concrete leadership opportunities as a principal investigator, access to cutting-edge infrastructure and databases, and a mentorship network of national and international experts." },
-  { name: "Dr. Mireille Guillot", role: "Clinician-Researcher & Neonatologist", initials: "MG", color: "#25a89e", quote: "As an early career researcher and neonatologist, involvement in the POPCORN Research Network has provided invaluable mentorship and collaboration opportunities. It has fostered connections beyond my local environment, created opportunities to contribute to impactful research initiatives, and helped position me for future academic opportunities." },
+  {
+    name: "Dr. Peter Gill",
+    role: "Clinician-Researcher",
+    initials: "PG",
+    color: "#253587",
+    quote: "Being part of the POPCORN network has advanced my professional development and provided numerous career opportunities. POPCORN's structure as a pan-Canadian research platform has facilitated collaboration with leading investigators, clinicians, and patient partners across multiple sites, research pillars, and disciplines. I've had opportunities to contribute to study design, high-impact studies, grant competitions, and to partner on large multi-national grant opportunities. The network's commitment to mentorship and growth, has accelerated my capacity to lead and contribute meaningfully to national research programs.",
+  },
+  {
+    name: "Dr. Charles-Antoine Guay",
+    role: "Postdoctoral trainee & Specialist in public health and preventive medicine",
+    initials: "CG",
+    color: "#f4017f",
+    quote: "Being part of the POPCORN research network as a postdoctoral trainee and student award recipient is an enriching opportunity that allows me to acquire the tools necessary to launch my research program in a fully autonomous manner. Since joining POPCORN, I have had the opportunity to evolve within a highly structured and stimulating research environment, providing me with concrete leadership opportunities as a principal investigator, access to cutting-edge infrastructure and databases, and a mentorship network composed of national and international experts in immunization, infectious diseases, and pediatric health.\n\nMy involvement within POPCORN also represents a unique opportunity to further expand my collaborative network, which will help propel my emerging career as an independent researcher. Ultimately, the network has played and continues to play a crucial role in helping me secure salary support, enabling me to fully dedicate myself to my research activities alongside my clinical practice.",
+  },
+  {
+    name: "Dr. Mireille Guillot",
+    role: "Clinician-Researcher",
+    initials: "MG",
+    color: "#25a89e",
+    quote: "As an early career researcher and neonatologist, involvement in the POPCORN Research Network has provided invaluable mentorship and collaboration opportunities. It has fostered connections beyond my local environment, created opportunities to contribute to impactful research initiatives, and helped position me for future academic opportunities.",
+  },
 ] as const;
 
 // ─── REACH STATS ──────────────────────────────────────────────────────────────
 
 export const REACH_STATS = [
-  { value: 16,    label: "patient & parent partners",  prefix: "",  note: "Lived-experience voices at every level" },
-  { value: 31,    label: "honoraria paid",              prefix: "",  note: "Patient and family partners compensated, not just consulted" },
-  { value: 14627, label: "in honoraria",                prefix: "$", note: "Ensuring partners are compensated equitably" },
-  { value: 105,   label: "researchers",                 prefix: "",  note: "Across 16 hospitals and multiple disciplines" },
-  { value: 54,    label: "research coordinators",       prefix: "",  note: "Site staff keeping studies running" },
-  { value: 19,    label: "member institutions",         prefix: "",  note: "Hospitals and sites across Canada" },
-  { value: 8,     label: "root networks",               prefix: "",  note: "National networks POPCORN is built upon" },
-  { value: 12,    label: "collaborating networks",      prefix: "",  note: "Partners strengthening our reach" },
-  { value: 7,     label: "industry partners",           prefix: "",  note: "Supporting research infrastructure" },
-  { value: 13,    label: "biobank staff",               prefix: "",  note: "Managing Canada's pediatric biobank" },
-  { value: 3,     label: "public partners",             prefix: "",  note: "Amplifying research to the public" },
-  { value: 11,    label: "letters of support provided", prefix: "",  note: "Backing for grant applications" },
+  { value: 16,    label: "patient & parent partners",    prefix: "",  note: "Lived-experience voices at every level" },
+  { value: 31,    label: "honoraria paid",                prefix: "",  note: "Patient and family partners compensated, not just consulted" },
+  { value: 14627, label: "in honoraria",                  prefix: "$", note: "Ensuring partners are compensated equitably" },
+  { value: 3,     label: "public partners",               prefix: "",  note: "Amplifying research to the public" },
+  { value: 7,     label: "industry partners",             prefix: "",  note: "Supporting research infrastructure" },
+  { value: 105,   label: "researchers",                   prefix: "",  note: "Across 19 sites and multiple disciplines" },
+  { value: 54,    label: "research coordinators/site staff", prefix: "", note: "Site staff keeping studies running" },
+  { value: 13,    label: "biobank staff",                 prefix: "",  note: "Managing Canada's pediatric biobank" },
+  { value: 10,    label: "admin/operational staff",       prefix: "",  note: "Central operations team" },
+  { value: 19,    label: "member institutions/sites",     prefix: "",  note: "Hospitals and sites across Canada" },
+  { value: 11,    label: "letters of support provided",   prefix: "",  note: "Backing for grant applications" },
+  { value: 8,     label: "root networks",                 prefix: "",  note: "National networks POPCORN is built upon" },
+  { value: 12,    label: "collaborating networks",        prefix: "",  note: "Partners strengthening our reach" },
 ] as const;
 
 // ─── SNA ──────────────────────────────────────────────────────────────────────
@@ -168,7 +406,7 @@ export const WHATS_NEXT = {
   headline: "POPCORN 2.0",
   subhead: "Funded through 2028 via CBRF",
   pullQuote: "The future of the POPCORN network is firmly focused on expansion, innovation, and impact.",
-  body: `Looking ahead, POPCORN is at a pivotal moment, marked by new ambitions and strong potential for growth. Building on POPCORN 1.0, POPCORN 2.0 has secured funding through 2028 to substantially strengthen our collective capacity to respond to future pandemics — while leveraging this infrastructure between health crises to improve the health of pregnant people and children in Canada.\n\nWe are developing a renewed vision and foundational strategic plan, informed by in-depth interviews with network members, funders, public health partners, and clinicians.\n\nPOPCORN will continue monitoring diseases and threats to children's health, supporting observational studies and multicenter clinical trials, and developing key partnerships with pediatric groups, frontline workers, and international research groups.\n\nEDI+I will continue to guide all our activities. POPCORN remains firmly committed to collaborating with diverse communities, reducing health inequities, and promoting inclusive, patient-centered research.`,
+  body: `Looking ahead, POPCORN is at a pivotal moment, marked by new ambitions and strong potential for growth. Building on the achievements of POPCORN during the pandemic (a.k.a. POPCORN 1.0), POPCORN 2.0 has secured funding from the Canadian Biomedical Research Fund through 2028, aimed at substantially strengthening our collective capacity to respond to future pandemics. However, we also wish to leverage this infrastructure between health crises to improve the health of pregnant people and children in Canada. With this in mind, we are working to develop a renewed vision and purpose, as well as a foundational strategic plan that will guide the network's activities over the coming years. This plan will be developed following in-depth interviews with network members, funders, public health partners, and clinicians.\n\nPOPCORN will continue its efforts in monitoring diseases and threats to children's health in Canada, while supporting observational studies and multicenter clinical trials. At the same time, we will continue to develop and strengthen key partnerships—with pediatric groups, frontline workers, and international research groups—to foster an integrated and interdisciplinary approach.\n\nThese advances are accompanied by a significant expansion of our activities. We are supporting a growing number of projects and seeing an increase in the volume of funding applications submitted. We will also continue to create new opportunities for our members, ranging from mentoring young researchers to expanded funding opportunities for pilot projects. We will also work to diversify our funding sources and secure funding beyond 2028.\n\nCollaboration and the engagement of knowledge users remain at the heart of POPCORN's purpose. Following our strategic planning, we will initiate a sustained re-engagement with our partners, including public health stakeholders, to ensure that our research efforts align with shared priorities and address concrete needs. This approach also translates into a significant increase in the number and diversity of knowledge transfer outputs, promoting the rapid application of research findings in clinical and decision-making settings.\n\nEquity, diversity, inclusion, and Indigeneity (EDI+I) will continue to guide all of our activities. POPCORN remains firmly committed to collaborating with diverse communities, reducing health inequities, and promoting inclusive, patient-centered research. Through training, mentoring, and professional development opportunities grounded in EDI+I principles, we aim to support the next generation of researchers in maternal and child health.\n\nIn short, the future of the POPCORN network is firmly focused on expansion, innovation, and impact. Thanks to the ongoing commitment of our partners and collaborators, we will continue our purpose to prepare the country, its pregnant people, and its children for potential future pandemics, while leveraging our expertise and infrastructure to sustainably improve the health and well-being of children and pregnant people across Canada.`,
 } as const;
 
 // ─── NAV SECTIONS ────────────────────────────────────────────────────────────
@@ -178,12 +416,11 @@ export const NAV_SECTIONS = [
   { id: "land-ack",            label: "Land Acknowledgement" },
   { id: "leadership",          label: "01 Leadership" },
   { id: "goals",               label: "02 Goals" },
-  { id: "canada-map",          label: "03 Across Canada" },
-  { id: "projects",            label: "04 Projects" },
-  { id: "patient-engagement",  label: "05 Patient Engagement" },
-  { id: "edi",                 label: "06 EDI+I" },
-  { id: "ecr",                 label: "07 Career Advancement" },
-  { id: "km",                  label: "08 Knowledge Mobilization" },
-  { id: "sna",                 label: "09 Network Analysis" },
-  { id: "whats-next",          label: "10 What's to Come" },
+  { id: "projects",            label: "03 Projects" },
+  { id: "patient-engagement",  label: "04 Patient Engagement" },
+  { id: "edi",                 label: "05 EDI+I" },
+  { id: "ecr",                 label: "06 Career Advancement" },
+  { id: "km",                  label: "07 Knowledge Mobilization" },
+  { id: "sna",                 label: "08 Network Analysis" },
+  { id: "whats-next",          label: "09 What's to Come" },
 ] as const;
