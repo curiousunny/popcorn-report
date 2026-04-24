@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Serif_4, Caveat } from "next/font/google";
+import { Fraunces, Poppins, Coming_Soon } from "next/font/google";
 import { PaperGrain } from "@/components/PaperGrain";
 import "./globals.css";
 
@@ -10,22 +10,24 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
-const sourceSerif4 = Source_Serif_4({
-  variable: "--font-source-serif",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
-const caveat = Caveat({
-  variable: "--font-caveat",
+const comingSoon = Coming_Soon({
+  variable: "--font-coming-soon",
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "POPCORN 2026 Impact Report",
   description:
-    "A pan-Canadian pediatric research network studying children's and families' health at 16 hospitals across Canada. Funded by CIHR and CBRF.",
+    "Pandemic Readiness Research Shaping the Future of Maternal and Child Health. A pan-Canadian pediatric research network at 16 hospitals across Canada.",
 };
 
 export default function RootLayout({
@@ -36,12 +38,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${sourceSerif4.variable} ${caveat.variable} h-full`}
+      className={`${fraunces.variable} ${poppins.variable} ${comingSoon.variable} h-full`}
     >
       <body className="min-h-full antialiased">
-          <PaperGrain />
-          {children}
-        </body>
+        <PaperGrain />
+        {children}
+      </body>
     </html>
   );
 }

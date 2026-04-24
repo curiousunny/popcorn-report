@@ -1,130 +1,34 @@
-"use client";
-
-import { useState } from "react";
-import { motion } from "motion/react";
-import { Section } from "@/components/ui/Section";
-import { CrayonUnderline } from "@/components/ui/CrayonUnderline";
 import { GOALS } from "@/content/data/site-data";
-import { useReducedMotion } from "@/lib/use-reduced-motion";
-
-/* Stagger vertical offsets for desktop asymmetric grid */
-const OFFSETS = ["mt-0", "mt-10", "mt-4", "mt-16", "mt-6"];
-
-type Goal = (typeof GOALS)[number];
-
-function GoalCard({ goal, offset, delay }: { goal: Goal; offset: string; delay: number }) {
-  const [hovered, setHovered] = useState(false);
-  const reduced = useReducedMotion();
-
-  return (
-    <motion.div
-      initial={reduced ? false : { opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-15%" }}
-      transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1], delay }}
-      onHoverStart={() => setHovered(true)}
-      onHoverEnd={() => setHovered(false)}
-      onFocus={() => setHovered(true)}
-      onBlur={() => setHovered(false)}
-      className={`min-w-[220px] lg:min-w-0 flex-shrink-0 lg:flex-shrink cursor-default ${offset}`}
-    >
-      {/* Hand-drawn number */}
-      <p
-        className="mb-3 select-none"
-        style={{
-          fontFamily: "var(--font-fraunces)",
-          fontOpticalSizing: "auto",
-          fontSize: "3.5rem",
-          fontWeight: 900,
-          lineHeight: 1,
-          color: "var(--ochre)",
-          opacity: 0.35,
-        }}
-        aria-hidden="true"
-      >
-        {goal.number}
-      </p>
-
-      <h3
-        className="mb-1 leading-snug"
-        style={{
-          fontFamily: "var(--font-fraunces)",
-          fontOpticalSizing: "auto",
-          fontSize: "1.15rem",
-          fontWeight: 700,
-          color: "var(--ink)",
-        }}
-      >
-        {goal.title}
-      </h3>
-
-      <motion.div
-        animate={hovered && !reduced ? { opacity: 1, scaleX: 1 } : { opacity: 0, scaleX: 0 }}
-        style={{ originX: 0 }}
-        transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
-      >
-        <CrayonUnderline className="mb-3" />
-      </motion.div>
-
-      {!hovered && <div className="mb-3 h-[12px]" aria-hidden="true" />}
-
-      <p
-        className="text-sm leading-relaxed"
-        style={{ fontFamily: "var(--font-source-serif)", color: "var(--ink-muted)" }}
-      >
-        {goal.description}
-      </p>
-    </motion.div>
-  );
-}
+import { GoalIcon } from "@/components/ui/GoalIcon";
+import { FadeIn } from "@/components/ui/FadeIn";
+import { CopyLink } from "@/components/ui/CopyLink";
 
 export function Goals() {
-  const reduced = useReducedMotion();
-
   return (
-    <Section id="goals">
-      <div className="max-w-6xl mx-auto">
-        <motion.h2
-          initial={reduced ? false : { opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-15%" }}
-          transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1] }}
-          className="mb-4"
-          style={{
-            fontFamily: "var(--font-fraunces)",
-            fontOpticalSizing: "auto",
-            fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
-            fontWeight: 800,
-            color: "var(--ink)",
-          }}
-        >
-          The 5 goals guiding our work
-        </motion.h2>
-
-        <motion.p
-          initial={reduced ? false : { opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-15%" }}
-          transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1], delay: 0.06 }}
-          className="text-base mb-16 max-w-xl"
-          style={{ fontFamily: "var(--font-source-serif)", color: "var(--ink-muted)" }}
-        >
-          POPCORN 2.0 is organized around five strategic priorities that span
-          preparedness, equity, and collaboration.
-        </motion.p>
-
-        {/* Mobile: horizontal scroll. Desktop: staggered 5-column grid */}
-        <div className="flex gap-8 overflow-x-auto pb-4 lg:overflow-x-visible lg:grid lg:grid-cols-5 lg:gap-8">
-          {GOALS.map((goal, i) => (
-            <GoalCard
-              key={goal.number}
-              goal={goal}
-              offset={OFFSETS[i]}
-              delay={i * 0.07}
-            />
-          ))}
+    <section id="goals" style={{ scrollMarginTop: 80 }}>
+      <div style={{ marginBottom: 40 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>02 — Goals</div>
+          <CopyLink id="goals" />
         </div>
+        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 700, color: "#253587", margin: 0 }}>Our Five Goals</h2>
+        <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#555", marginTop: 12, maxWidth: 640, lineHeight: 1.6 }}>
+          By meeting these goals, POPCORN ensures children and pregnant people across Canada get the care they need — and that we&rsquo;re ready for the next health crisis.
+        </p>
       </div>
-    </Section>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20 }}>
+        {GOALS.map((g, i) => (
+          <FadeIn key={g.id} delay={i * 100}>
+            <div style={{ background: "white", borderRadius: 16, padding: "28px 24px", boxShadow: "0 2px 16px rgba(37,53,135,0.06)", border: "1px solid #f0f0f0", height: "100%", boxSizing: "border-box" as const }}>
+              <div style={{ marginBottom: 16 }}><GoalIcon type={g.icon} size={40} /></div>
+              <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 15, color: "#f4017f", marginBottom: 6 }}>Goal {g.id}</div>
+              <h3 style={{ fontFamily: "var(--font-fraunces)", fontWeight: 700, fontSize: 18, color: "#253587", margin: "0 0 10px", lineHeight: 1.3 }}>{g.headline}</h3>
+              <p style={{ fontFamily: "var(--font-poppins)", fontSize: 14, color: "#666", lineHeight: 1.65, margin: 0 }}>{g.desc}</p>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+    </section>
   );
 }

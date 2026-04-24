@@ -1,99 +1,124 @@
 "use client";
 
-import { motion } from "motion/react";
-import { Section } from "@/components/ui/Section";
-import { LAND_ACKNOWLEDGEMENT } from "@/content/data/site-data";
-import { useReducedMotion } from "@/lib/use-reduced-motion";
-import { fadeUp, staggerChildren } from "@/lib/motion";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { FadeIn } from "@/components/ui/FadeIn";
 
-function ScrollArrow() {
-  const reduced = useReducedMotion();
-  return (
-    <motion.div
-      animate={reduced ? {} : { y: [0, 7, 0] }}
-      transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-      aria-hidden="true"
-    >
-      <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M 15 4 C 14.5 8, 14.5 20, 15 34 M 6 24 C 9 29, 12 34, 15 34 C 18 34, 21 29, 24 24"
-          stroke="var(--ochre)"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </motion.div>
-  );
-}
+const PHOTOS = [
+  "/photos/IMG_0611.webp",
+  "/photos/IMG_8747.webp",
+  "/photos/IMG_8759.webp",
+  "/photos/IMG_8768.webp",
+  "/photos/IMG_8786.webp",
+  "/photos/IMG_8838.webp",
+  "/photos/IMG_8847.webp",
+  "/photos/IMG_8862.webp",
+];
+
+type Photo = { id: number; src: string; x: number; y: number; rotation: number };
 
 export function Landing() {
-  const reduced = useReducedMotion();
-  const animProps = reduced
-    ? {}
-    : { initial: "hidden" as const, animate: "visible" as const, variants: staggerChildren };
+  const [photos, setPhotos] = useState<Photo[]>([]);
+  const lastSpawn = useRef(0);
+  const lastPos = useRef({ x: 0, y: 0 });
+  const photoIdx = useRef(0);
+  const reduced = useRef(false);
+
+  useEffect(() => {
+    reduced.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced.current) return;
+
+    const handler = (e: MouseEvent) => {
+      const now = Date.now();
+      const dx = e.clientX - lastPos.current.x;
+      const dy = e.clientY - lastPos.current.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (now - lastSpawn.current < 700 || dist < 60) return;
+
+      const rect = document.getElementById("hero-section")?.getBoundingClientRect();
+      if (!rect || e.clientY > rect.bottom || e.clientY < rect.top) return;
+
+      lastSpawn.current = now;
+      lastPos.current = { x: e.clientX, y: e.clientY };
+
+      const id = now;
+      const src = PHOTOS[photoIdx.current % PHOTOS.length];
+      photoIdx.current++;
+      const rotation = (Math.random() - 0.5) * 18;
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      setPhotos((p) => [...p.slice(-7), { id, src, x, y, rotation }]);
+      setTimeout(() => setPhotos((p) => p.filter((pp) => pp.id !== id)), 2200);
+    };
+
+    window.addEventListener("mousemove", handler);
+    return () => window.removeEventListener("mousemove", handler);
+  }, []);
 
   return (
-    <Section
-      id="landing"
-      className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden"
+    <section
+      id="hero-section"
+      style={{
+        minHeight: "100vh", display: "flex", flexDirection: "column",
+        alignItems: "center", justifyContent: "center",
+        background: "#f5f3fa", position: "relative", overflow: "hidden",
+        padding: "60px 24px", cursor: "none",
+      }}
     >
-      {/* Placeholder cover illustration */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage: "url(/illustrations/cover.svg)",
-          backgroundSize: "60% auto",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          opacity: 0.18,
-        }}
-        aria-hidden="true"
-      />
-
-      <motion.div
-        {...animProps}
-        className="relative z-10 text-center max-w-4xl mx-auto"
-      >
-        <motion.p
-          variants={reduced ? undefined : fadeUp}
-          className="text-xs uppercase tracking-[0.25em] mb-6"
-          style={{ fontFamily: "var(--font-source-serif)", color: "var(--ink-muted)" }}
-        >
-          POPCORN · 2026
-        </motion.p>
-
-        <motion.h1
-          variants={reduced ? undefined : fadeUp}
-          className="mb-10"
+      {/* Photo popups */}
+      {photos.map((p) => (
+        <div
+          key={p.id}
           style={{
-            fontFamily: "var(--font-fraunces)",
-            fontOpticalSizing: "auto",
-            fontSize: "clamp(3rem, 9vw, 7rem)",
-            fontWeight: 900,
-            lineHeight: 1.02,
-            color: "var(--ink)",
+            position: "absolute", left: p.x - 80, top: p.y - 70,
+            width: 160, height: 140, borderRadius: 12, overflow: "hidden",
+            boxShadow: "0 8px 32px rgba(37,53,135,0.22)",
+            transform: `rotate(${p.rotation}deg)`,
+            pointerEvents: "none", zIndex: 10,
+            animation: "photoPopIn 2.2s ease forwards",
+            border: "3px solid white",
           }}
         >
-          POPCORN
-          <br />
-          2026 Impact
-          <br />
-          Report
-        </motion.h1>
+          <img src={p.src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+        </div>
+      ))}
 
-        <motion.p
-          variants={reduced ? undefined : fadeUp}
-          className="max-w-2xl mx-auto text-sm leading-relaxed"
-          style={{ fontFamily: "var(--font-source-serif)", color: "var(--ink-muted)" }}
-        >
-          {LAND_ACKNOWLEDGEMENT}
-        </motion.p>
-      </motion.div>
-
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-        <ScrollArrow />
+      {/* Content */}
+      <div style={{ textAlign: "center", maxWidth: 700, position: "relative", zIndex: 2 }}>
+        <FadeIn>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Image src="/POPCORN_logo.png" alt="POPCORN" width={197} height={52} style={{ height: 52, width: "auto" }} priority />
+          </div>
+        </FadeIn>
+        <FadeIn delay={200}>
+          <h1 style={{
+            fontFamily: "var(--font-fraunces)", fontWeight: 700,
+            fontSize: "clamp(20px, 3vw, 28px)", color: "#253587",
+            margin: "32px 0 16px", lineHeight: 1.3,
+          }}>
+            Pandemic Readiness Research Shaping the<br />Future of Maternal and Child Health.
+          </h1>
+        </FadeIn>
+        <FadeIn delay={400}>
+          <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#555", margin: "0 0 40px" }}>
+            2026 Impact Report
+          </p>
+        </FadeIn>
+        <FadeIn delay={600}>
+          <a href="#land-ack" style={{ display: "inline-block", textDecoration: "none", animation: "bounce 1.6s ease-in-out infinite" }}>
+            <svg width="32" height="40" viewBox="0 0 32 40" fill="none" aria-label="Scroll down">
+              <path d="M16 4v28M6 24l10 12 10-12" stroke="#253587" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
+        </FadeIn>
       </div>
-    </Section>
+
+      {/* Animated aura blobs */}
+      <div aria-hidden="true" style={{ position: "absolute", top: "-10%", left: "-5%", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, #d9c8f0 0%, transparent 70%)", filter: "blur(60px)", animation: "aura1 12s ease-in-out infinite", willChange: "transform" }}/>
+      <div aria-hidden="true" style={{ position: "absolute", top: "20%", right: "-10%", width: 450, height: 450, borderRadius: "50%", background: "radial-gradient(circle, #c8dff5 0%, transparent 70%)", filter: "blur(60px)", animation: "aura2 15s ease-in-out infinite", willChange: "transform" }}/>
+      <div aria-hidden="true" style={{ position: "absolute", bottom: "-5%", left: "30%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, #c8ede9 0%, transparent 70%)", filter: "blur(60px)", animation: "aura3 10s ease-in-out infinite", willChange: "transform" }}/>
+      <div aria-hidden="true" style={{ position: "absolute", bottom: "15%", right: "5%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, #fddcec 0%, transparent 70%)", filter: "blur(50px)", animation: "aura1 18s ease-in-out infinite reverse", willChange: "transform" }}/>
+    </section>
   );
 }
