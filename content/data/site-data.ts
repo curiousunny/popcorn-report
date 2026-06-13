@@ -1,10 +1,10 @@
-// POPCORN 2026 — Core site data
+// POPCORN 2025 — Core site data
 // Source: 2026_04_13-POP-Impact_Report_Content-DRAFT.pdf
 
 export const SITE_META = {
-  title: "POPCORN 2026 Impact Report",
-  description: "Pandemic Readiness Research Shaping the Future of Maternal and Child Health.",
-  url: "https://popcorn-2026.vercel.app",
+  title: "POPCORN 2025 Impact Report",
+  description: "Research shaping the future of maternal and child health.",
+  url: "https://popcorn-report.vercel.app",
   ogImage: "/og-image.png",
 } as const;
 
@@ -22,7 +22,7 @@ export const LEADERS = [
     initials: "OD",
     color: "#253587",
     pullQuote: "Seeing the development of collaborations and synergy that would likely not have seen the light of day otherwise constitutes, in my eyes, one of the most concrete markers of success.",
-    full: `It is with much pride that I present POPCORN's 2026 impact report. Since its launch in March 2022, POPCORN has positioned itself as an essential pan Canadian pediatric research initiative, bringing together researchers, clinicians, and knowledge users to better respond to major challenges in child and maternal health.\n\nFrom the beginning, POPCORN was created with a clear objective: to put in place a research infrastructure capable of rapidly responding to emerging health issues affecting children and pregnant people.\n\nIn the last few years, we have been able to enlist 16 pediatric hospitals across the country while working towards integrating their partnering maternal health centers as well as many national multidisciplinary networks. This "network of networks" approach allows us to lead collaborative and interdisciplinary research, drawing from the unique expertise of each participating network.\n\nOur platform relies on a robust governance structure, built around 5 core content pillars – emergency medicine, inpatient medicine, critical care, infectious diseases, and maternal health – as well as cross-cutting pillars including data governance and harmonization, knowledge mobilization, and patient engagement. Equity, diversity, inclusion and Indigeneity principles are integrated into all our activities. This structure ensures our research is scientifically rigorous, equitable, and truly centered on the patients.\n\nThanks to the key support from the Canadian Institutes of Health Research (CIHR) and the Canada Biomedical Research Fund (CBRF), POPCORN was able to build key infrastructure for pandemic preparedness. Our achievements would not be possible without the hard work performed by the Executive Committee, the Governance Committee, and the central operations team, including the support from MICYRN and CHU Sainte-Justine Research Center.\n\nPOPCORN has also played a unifying role within the pediatric community. Seeing the development of collaborations and synergy that would likely not have seen the light of day otherwise constitutes, in my eyes, one of the most concrete markers of success.\n\nI look forward to continuing this collective adventure in the years to come by fostering greater collaboration, promoting promising research initiatives, and generating tangible benefits for the health and well-being of children and pregnant people all over Canada. POPCORN remains firmly committed to strengthening and expanding its research capabilities and to becoming a leading player in Canadian research. Thank you all for your continued support.`,
+    full: `It is with much pride that I present POPCORN's 2025 impact report. Since its launch in March 2022, POPCORN has positioned itself as an essential pan Canadian pediatric research initiative, bringing together researchers, clinicians, and knowledge users to better respond to major challenges in child and maternal health.\n\nFrom the beginning, POPCORN was created with a clear objective: to put in place a research infrastructure capable of rapidly responding to emerging health issues affecting children and pregnant people.\n\nIn the last few years, we have been able to enlist 16 pediatric hospitals across the country while working towards integrating their partnering maternal health centers as well as many national multidisciplinary networks. This "network of networks" approach allows us to lead collaborative and interdisciplinary research, drawing from the unique expertise of each participating network.\n\nOur platform relies on a robust governance structure, built around 5 core content pillars – emergency medicine, inpatient medicine, critical care, infectious diseases, and maternal health – as well as cross-cutting pillars including data governance and harmonization, knowledge mobilization, and patient engagement. Equity, diversity, inclusion and Indigeneity principles are integrated into all our activities. This structure ensures our research is scientifically rigorous, equitable, and truly centered on the patients.\n\nThanks to the key support from the Canadian Institutes of Health Research (CIHR) and the Canada Biomedical Research Fund (CBRF), POPCORN was able to build key infrastructure for pandemic preparedness. Our achievements would not be possible without the hard work performed by the Executive Committee, the Governance Committee, and the central operations team, including the support from MICYRN and CHU Sainte-Justine Research Center.\n\nPOPCORN has also played a unifying role within the pediatric community. Seeing the development of collaborations and synergy that would likely not have seen the light of day otherwise constitutes, in my eyes, one of the most concrete markers of success.\n\nI look forward to continuing this collective adventure in the years to come by fostering greater collaboration, promoting promising research initiatives, and generating tangible benefits for the health and well-being of children and pregnant people all over Canada. POPCORN remains firmly committed to strengthening and expanding its research capabilities and to becoming a leading player in Canadian research. Thank you all for your continued support.`,
   },
   {
     key: "gc",
@@ -40,7 +40,7 @@ export const LEADERS = [
 export const GOALS = [
   { id: 1, icon: "shield",  headline: "Be Ready for Future Pandemics",           desc: "Build a strong, flexible research system that can quickly respond to new health threats affecting kids and pregnant people across Canada." },
   { id: 2, icon: "heart",   headline: "Improve Health for Pregnant People and Kids", desc: "Focus on important health issues by using the strengths of children's hospitals and research networks to do reliable, science-based studies." },
-  { id: 3, icon: "network", headline: "Work Better Together",                     desc: "Make it easier for researchers, doctors, families, and youth to team up on studies and clinical trials across different locations and specialties." },
+  { id: 3, icon: "network", headline: "Work Better Together",                     desc: "Make it easier for research teams, healthcare providers, families, and youth to team up on studies and clinical trials across different locations and specialties." },
   { id: 4, icon: "equity",  headline: "Make Research Fair and Inclusive",         desc: "Involve people from all backgrounds and make sure everyone has a voice in research, especially those from underserved communities." },
   { id: 5, icon: "compass", headline: "Help Leaders Make Smart Choices",          desc: "Give health experts and decision-makers up-to-date, accurate information to guide public health actions—especially during outbreaks." },
 ] as const;
@@ -49,10 +49,10 @@ export const GOALS = [
 
 export const STATUS_LABELS: Record<string, { label: string; color: string }> = {
   planning:   { label: "Planning",   color: "#f7a40b" },
-  recruiting: { label: "Recruiting", color: "#25a89e" },
+  recruiting: { label: "Recruiting", color: "#f7a40b" },
   analysis:   { label: "Analysis",   color: "#253587" },
   manuscript: { label: "Manuscript", color: "#f4017f" },
-  complete:   { label: "Complete",   color: "#555" },
+  complete:   { label: "Complete",   color: "#25a89e" },
 };
 
 // ─── PROJECTS ────────────────────────────────────────────────────────────────
@@ -355,6 +355,9 @@ export const ECR_VOICES = [
     name: "Dr. Peter Gill",
     role: "Clinician-Researcher",
     initials: "PG",
+    photoSrc: "/report-assets/ecr/dr-peter-gill.webp",
+    photoAlt: "Dr. Peter Gill",
+    photoPosition: "50% 18%",
     color: "#253587",
     quote: "Being part of the POPCORN network has advanced my professional development and provided numerous career opportunities. POPCORN's structure as a pan-Canadian research platform has facilitated collaboration with leading investigators, clinicians, and patient partners across multiple sites, research pillars, and disciplines. I've had opportunities to contribute to study design, high-impact studies, grant competitions, and to partner on large multi-national grant opportunities. The network's commitment to mentorship and growth, has accelerated my capacity to lead and contribute meaningfully to national research programs.",
   },
@@ -362,6 +365,9 @@ export const ECR_VOICES = [
     name: "Dr. Charles-Antoine Guay",
     role: "Postdoctoral trainee & Specialist in public health and preventive medicine",
     initials: "CG",
+    photoSrc: "/report-assets/ecr/dr-charles-antoine-guay.jpg",
+    photoAlt: "Dr. Charles-Antoine Guay",
+    photoPosition: "50% 22%",
     color: "#f4017f",
     quote: "Being part of the POPCORN research network as a postdoctoral trainee and student award recipient is an enriching opportunity that allows me to acquire the tools necessary to launch my research program in a fully autonomous manner. Since joining POPCORN, I have had the opportunity to evolve within a highly structured and stimulating research environment, providing me with concrete leadership opportunities as a principal investigator, access to cutting-edge infrastructure and databases, and a mentorship network composed of national and international experts in immunization, infectious diseases, and pediatric health.\n\nMy involvement within POPCORN also represents a unique opportunity to further expand my collaborative network, which will help propel my emerging career as an independent researcher. Ultimately, the network has played and continues to play a crucial role in helping me secure salary support, enabling me to fully dedicate myself to my research activities alongside my clinical practice.",
   },
@@ -369,6 +375,9 @@ export const ECR_VOICES = [
     name: "Dr. Mireille Guillot",
     role: "Clinician-Researcher",
     initials: "MG",
+    photoSrc: "/report-assets/ecr/dr-mireille-guillot.png",
+    photoAlt: "Dr. Mireille Guillot",
+    photoPosition: "50% 45%",
     color: "#25a89e",
     quote: "As an early career researcher and neonatologist, involvement in the POPCORN Research Network has provided invaluable mentorship and collaboration opportunities. It has fostered connections beyond my local environment, created opportunities to contribute to impactful research initiatives, and helped position me for future academic opportunities.",
   },
@@ -388,8 +397,24 @@ export const REACH_STATS = [
   { value: 10,    label: "admin/operational staff",       prefix: "",  note: "Central operations team" },
   { value: 19,    label: "member institutions/sites",     prefix: "",  note: "Hospitals and sites across Canada" },
   { value: 11,    label: "letters of support provided",   prefix: "",  note: "Backing for grant applications" },
-  { value: 8,     label: "root networks",                 prefix: "",  note: "National networks POPCORN is built upon" },
+  { value: 8,     label: "supporting organizations",      prefix: "",  note: "National organizations supporting POPCORN" },
   { value: 12,    label: "collaborating networks",        prefix: "",  note: "Partners strengthening our reach" },
+] as const;
+
+export const KM_OUTPUT_STATS = [
+  {
+    value: 2,
+    label: "academic publications",
+    note: "Irwin et al. 2025 and Carwana et al. 2026.",
+    detail: "Irwin SH, McCluskey A, Dong SY, et al. Journal of Patient Experience. 2025;12. doi: 10.1177/23743735251346617. Carwana M, Roumeliotis N, Dean P, et al. CMAJ. 2026;198(6):E207-E215. doi: 10.1503/cmaj.251317.",
+  },
+  { value: 1, label: "poster presentation", note: "One poster presentation shared POPCORN work with research audiences.", detail: "Captured in the draft report under Knowledge Mobilization publications and outputs." },
+  { value: 1, label: "podcast", note: "One podcast helped translate POPCORN activity for broader audiences.", detail: "Captured in the draft report under Knowledge Mobilization publications and outputs." },
+  { value: 2, label: "oral research presentations", note: "Two oral research presentations helped circulate POPCORN findings.", detail: "Captured in the draft report under Knowledge Mobilization publications and outputs." },
+  { value: 1, label: "infographic", note: "One infographic translated findings into a visual knowledge product.", detail: "Captured in the draft report under Knowledge Mobilization publications and outputs." },
+  { value: 2, label: "national webinars", note: "Two national webinars connected POPCORN learning to larger child health audiences.", detail: "The draft report points readers to POPCORN training and events for more details on CHC webinars." },
+  { value: 1, label: "presentation/keynote", note: "One presentation or keynote extended POPCORN's visibility.", detail: "Captured in the draft report under Presentations and Media Interviews." },
+  { value: 2, label: "media interviews", note: "Two media interviews helped bring POPCORN work to public channels.", detail: "Captured in the draft report under Presentations and Media Interviews." },
 ] as const;
 
 // ─── SNA ──────────────────────────────────────────────────────────────────────
@@ -404,9 +429,9 @@ export const SNA_RECS = [
 
 export const WHATS_NEXT = {
   headline: "POPCORN 2.0",
-  subhead: "Funded through 2028 via CBRF",
+  subhead: "Funded through 2028 via the Canada Biomedical Research Fund",
   pullQuote: "The future of the POPCORN network is firmly focused on expansion, innovation, and impact.",
-  body: `Looking ahead, POPCORN is at a pivotal moment, marked by new ambitions and strong potential for growth. Building on the achievements of POPCORN during the pandemic (a.k.a. POPCORN 1.0), POPCORN 2.0 has secured funding from the Canadian Biomedical Research Fund through 2028, aimed at substantially strengthening our collective capacity to respond to future pandemics. However, we also wish to leverage this infrastructure between health crises to improve the health of pregnant people and children in Canada. With this in mind, we are working to develop a renewed vision and purpose, as well as a foundational strategic plan that will guide the network's activities over the coming years. This plan will be developed following in-depth interviews with network members, funders, public health partners, and clinicians.\n\nPOPCORN will continue its efforts in monitoring diseases and threats to children's health in Canada, while supporting observational studies and multicenter clinical trials. At the same time, we will continue to develop and strengthen key partnerships—with pediatric groups, frontline workers, and international research groups—to foster an integrated and interdisciplinary approach.\n\nThese advances are accompanied by a significant expansion of our activities. We are supporting a growing number of projects and seeing an increase in the volume of funding applications submitted. We will also continue to create new opportunities for our members, ranging from mentoring young researchers to expanded funding opportunities for pilot projects. We will also work to diversify our funding sources and secure funding beyond 2028.\n\nCollaboration and the engagement of knowledge users remain at the heart of POPCORN's purpose. Following our strategic planning, we will initiate a sustained re-engagement with our partners, including public health stakeholders, to ensure that our research efforts align with shared priorities and address concrete needs. This approach also translates into a significant increase in the number and diversity of knowledge transfer outputs, promoting the rapid application of research findings in clinical and decision-making settings.\n\nEquity, diversity, inclusion, and Indigeneity (EDI+I) will continue to guide all of our activities. POPCORN remains firmly committed to collaborating with diverse communities, reducing health inequities, and promoting inclusive, patient-centered research. Through training, mentoring, and professional development opportunities grounded in EDI+I principles, we aim to support the next generation of researchers in maternal and child health.\n\nIn short, the future of the POPCORN network is firmly focused on expansion, innovation, and impact. Thanks to the ongoing commitment of our partners and collaborators, we will continue our purpose to prepare the country, its pregnant people, and its children for potential future pandemics, while leveraging our expertise and infrastructure to sustainably improve the health and well-being of children and pregnant people across Canada.`,
+  body: `Looking ahead, POPCORN is at a pivotal moment, marked by new ambitions and strong potential for growth. Building on the achievements of POPCORN during the pandemic (a.k.a. POPCORN 1.0), POPCORN 2.0 has secured funding from the Canada Biomedical Research Fund through 2028, aimed at substantially strengthening our collective capacity to respond to future pandemics. However, we also wish to leverage this infrastructure between health crises to improve the health of pregnant people and children in Canada. With this in mind, we are working to develop a renewed vision and purpose, as well as a foundational strategic plan that will guide the network's activities over the coming years. This plan will be developed following in-depth interviews with network members, funders, public health partners, and clinicians.\n\nPOPCORN will continue its efforts in monitoring diseases and threats to children's health in Canada, while supporting observational studies and multicenter clinical trials. At the same time, we will continue to develop and strengthen key partnerships—with pediatric groups, frontline workers, and international research groups—to foster an integrated and interdisciplinary approach.\n\nThese advances are accompanied by a significant expansion of our activities. We are supporting a growing number of projects and seeing an increase in the volume of funding applications submitted. We will also continue to create new opportunities for our members, ranging from mentoring young researchers to expanded funding opportunities for pilot projects. We will also work to diversify our funding sources and secure funding beyond 2028.\n\nCollaboration and the engagement of knowledge users remain at the heart of POPCORN's purpose. Following our strategic planning, we will initiate a sustained re-engagement with our partners, including public health stakeholders, to ensure that our research efforts align with shared priorities and address concrete needs. This approach also translates into a significant increase in the number and diversity of knowledge transfer outputs, promoting the rapid application of research findings in clinical and decision-making settings.\n\nEquity, diversity, inclusion, and Indigeneity (EDI+I) will continue to guide all of our activities. POPCORN remains firmly committed to collaborating with diverse communities, reducing health inequities, and promoting inclusive, patient-centered research. Through training, mentoring, and professional development opportunities grounded in EDI+I principles, we aim to support the next generation of researchers in maternal and child health.\n\nIn short, the future of the POPCORN network is firmly focused on expansion, innovation, and impact. Thanks to the ongoing commitment of our partners and collaborators, we will continue our purpose to prepare the country, its pregnant people, and its children for potential future pandemics, while leveraging our expertise and infrastructure to sustainably improve the health and well-being of children and pregnant people across Canada.`,
 } as const;
 
 // ─── NAV SECTIONS ────────────────────────────────────────────────────────────
@@ -414,13 +439,12 @@ export const WHATS_NEXT = {
 export const NAV_SECTIONS = [
   { id: "hero-section",        label: "Cover" },
   { id: "land-ack",            label: "Land Acknowledgement" },
-  { id: "leadership",          label: "01 Leadership" },
-  { id: "goals",               label: "02 Goals" },
-  { id: "projects",            label: "03 Projects" },
-  { id: "patient-engagement",  label: "04 Patient Engagement" },
-  { id: "edi",                 label: "05 EDI+I" },
-  { id: "ecr",                 label: "06 Career Advancement" },
-  { id: "km",                  label: "07 Knowledge Mobilization" },
-  { id: "sna",                 label: "08 Network Analysis" },
-  { id: "whats-next",          label: "09 What's to Come" },
+  { id: "leadership",          label: "Leadership" },
+  { id: "goals",               label: "Goals" },
+  { id: "projects",            label: "Project Updates" },
+  { id: "patient-engagement",  label: "Patient Engagement" },
+  { id: "edi",                 label: "EDI+I" },
+  { id: "ecr",                 label: "Career Advancement" },
+  { id: "km",                  label: "Knowledge Mobilization" },
+  { id: "whats-next",          label: "What's to Come?" },
 ] as const;

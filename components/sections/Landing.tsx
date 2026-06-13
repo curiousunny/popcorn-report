@@ -62,8 +62,8 @@ export function Landing() {
       style={{
         minHeight: "100vh", display: "flex", flexDirection: "column",
         alignItems: "center", justifyContent: "center",
-        background: "#f5f3fa", position: "relative", overflow: "hidden",
-        padding: "60px 24px", cursor: "none",
+        background: "transparent", position: "relative", overflow: "hidden",
+        padding: "60px 24px",
       }}
     >
       {/* Photo popups */}
@@ -80,7 +80,7 @@ export function Landing() {
             border: "3px solid white",
           }}
         >
-          <img src={p.src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+          <Image src={p.src} alt="" fill sizes="160px" style={{ objectFit: "cover", objectPosition: "center top" }} />
         </div>
       ))}
 
@@ -88,15 +88,16 @@ export function Landing() {
       <div style={{ textAlign: "center", maxWidth: 700, position: "relative", zIndex: 2 }}>
         <FadeIn>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image src="/POPCORN_logo.png" alt="POPCORN" width={197} height={52} style={{ height: 52, width: "auto" }} priority />
+            <Image src="/POPCORN_logo.png" alt="POPCORN" width={260} height={69} style={{ height: "clamp(58px, 12vw, 76px)", width: "auto" }} priority />
           </div>
         </FadeIn>
         <FadeIn delay={150}>
-          <div style={{ margin: "28px auto 0", maxWidth: 480 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+          <div style={{ margin: "24px auto 0", width: "min(82vw, 480px)", position: "relative" }}>
+            <Image
               src="/canada-map.png"
-              alt="Map of Canada showing POPCORN's coast-to-coast network"
+              alt="Map of Canada"
+              width={640}
+              height={410}
               style={{
                 width: "100%", height: "auto", display: "block",
                 filter: "saturate(0) brightness(3) drop-shadow(0 0 32px rgba(37,53,135,0.22))",
@@ -108,16 +109,16 @@ export function Landing() {
         </FadeIn>
         <FadeIn delay={200}>
           <h1 style={{
-            fontFamily: "var(--font-fraunces)", fontWeight: 700,
+            fontFamily: "var(--font-heading)", fontWeight: 700,
             fontSize: "clamp(20px, 3vw, 28px)", color: "#253587",
-            margin: "32px 0 16px", lineHeight: 1.3,
+            margin: "28px auto 16px", lineHeight: 1.3, maxWidth: "min(580px, calc(100vw - 88px))",
           }}>
-            Pandemic Readiness Research Shaping the<br />Future of Maternal and Child Health.
+            Research Shaping the Future of Maternal and Child Health.
           </h1>
         </FadeIn>
         <FadeIn delay={400}>
-          <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#555", margin: "0 0 40px" }}>
-            2026 Impact Report
+          <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#111", margin: "0 0 40px" }}>
+            2025 Impact Report
           </p>
         </FadeIn>
         <FadeIn delay={600}>

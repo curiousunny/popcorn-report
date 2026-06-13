@@ -51,10 +51,10 @@ export function Counter({ value, label, context, format }: Props) {
         aria-label={fmt(value, format)}
         className="block tabular-nums"
         style={{
-          fontFamily: "var(--font-fraunces)",
+          fontFamily: "var(--font-heading)",
           fontSize: "clamp(2.5rem, 5vw, 3.75rem)",
           fontWeight: 700,
-          color: "var(--ochre)",
+          color: "var(--pink)",
           lineHeight: 1,
           fontOpticalSizing: "auto",
         }}
@@ -63,13 +63,13 @@ export function Counter({ value, label, context, format }: Props) {
       </span>
       <span
         className="font-semibold text-base"
-        style={{ fontFamily: "var(--font-source-serif)", color: "var(--ink)" }}
+        style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}
       >
         {label}
       </span>
       <span
         className="text-sm"
-        style={{ fontFamily: "var(--font-source-serif)", color: "var(--ink-muted)" }}
+        style={{ fontFamily: "var(--font-poppins)", color: "#111" }}
       >
         {context}
       </span>

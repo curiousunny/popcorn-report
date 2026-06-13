@@ -1,79 +1,70 @@
-import { REACH_STATS } from "@/content/data/site-data";
-import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionBanner } from "@/components/ui/SectionBanner";
-import { Counter } from "@/components/ui/Counter";
-
-const OUTPUTS = [
-  {
-    category: "Promotional Materials",
-    items: [
-      "Fact sheets (one for collaborators, one for patients and families)",
-      "Infographic",
-      "Map of participating sites",
-      "Organizational structure",
-      "All available in English and French on website",
-    ],
-  },
-  {
-    category: "Publications",
-    items: [
-      "Irwin SH, McCluskey A, Dong SY, et al. Informing Eating Disorder Support Through Lived Experience. Journal of Patient Experience. 2025;12. doi:10.1177/23743735251346617",
-      "Carwana M, Roumeliotis N, Dean P, et al. Hospital admissions for maltreatment among children younger than 2 years during the COVID-19 pandemic in Canada. CMAJ. 2026;198(6):E207-E215. doi:10.1503/cmaj.251317",
-      "1 poster presentation",
-      "1 podcast",
-      "2 oral research presentations",
-      "1 infographic",
-    ],
-  },
-  {
-    category: "Presentations & Media",
-    items: [
-      "2 national webinars",
-      "1 presentation and keynote",
-      "2 media interviews",
-    ],
-  },
-];
+import { ByTheNumbers } from "@/components/sections/ByTheNumbers";
+import { SNAContent } from "@/components/sections/SNA";
 
 export function KnowledgeMobilization() {
   return (
-    <section id="km" style={{ scrollMarginTop: 80 }}>
-      <SectionBanner id="km" title="Knowledge Mobilization Tools & Impact" subtitle="POPCORN's website and newsletter launched in 2022 and continues to grow. Website content is updated regularly, attracting more traffic. The top page views include: What is POPCORN?, Leadership, Projects, and Conference." />
+    <section id="km" className="chapter-section">
+      <SectionBanner id="km" title="Knowledge Mobilization Tools & Impact" />
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20, marginBottom: 48 }}>
-        {OUTPUTS.map((o, i) => (
-          <FadeIn key={o.category} delay={i * 100}>
-            <div style={{ background: "white", borderRadius: 14, padding: "22px", boxShadow: "0 1px 3px rgba(37,53,135,0.05)", border: "1px solid #f0f0f0" }}>
-              <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 15, color: "#25a89e", marginBottom: 12 }}>{o.category}</div>
-              <ul style={{ margin: 0, padding: "0 0 0 18px" }}>
-                {o.items.map((item) => (
-                  <li key={item} style={{ fontFamily: "var(--font-poppins)", fontSize: 13, color: "#555", marginBottom: 6, lineHeight: 1.5 }}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </FadeIn>
-        ))}
-      </div>
+      <div
+        data-theme-card="true"
+        style={{
+          background: "white",
+          border: "1px solid color-mix(in srgb, var(--chapter-color) 18%, white)",
+          borderRadius: 18,
+          padding: "clamp(22px, 4vw, 34px)",
+        }}
+      >
+        <p style={{ color: "#111", fontFamily: "var(--font-poppins)", fontSize: "clamp(1rem, 1.8vw, 1.15rem)", lineHeight: 1.75, margin: 0 }}>
+          POPCORN&apos;s  <a href="https://www.popcornpediatrics.ca/">website</a> and <a href="https://micyrn.us11.list-manage.com/subscribe?u=47a8a95d9e40cf8aff4c5aed3&id=bb77a913b6">newsletter</a> launched in 2022 and continues to grow.
+        </p>
+        
 
-      <div style={{ marginBottom: 16 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-          <div style={{ fontFamily: "var(--font-coming-soon)", fontSize: 18, color: "#f4017f", letterSpacing: 1 }}>Snapshot of Reach</div>
-        </div>
-        <h3 style={{ fontFamily: "var(--font-fraunces)", fontWeight: 700, fontSize: 28, color: "#253587", margin: 0 }}>By the Numbers</h3>
-      </div>
-
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 1, background: "#f0f0f0", borderRadius: 16, overflow: "hidden", boxShadow: "0 1px 4px rgba(37,53,135,0.06)" }}>
-        {REACH_STATS.map((s, i) => (
-          <div key={s.label} style={{ background: "white" }}>
-            <Counter
-              value={s.value}
-              label={s.label}
-              context={s.note}
-              format={s.prefix === "$" ? "currency" : "integer"}
-            />
+        <details
+          style={{
+            border: "1px solid color-mix(in srgb, var(--chapter-color) 20%, white)",
+            borderRadius: 14,
+            marginTop: 22,
+            overflow: "hidden",
+          }}
+        >
+          <summary
+            style={{
+              color: "var(--chapter-color)",
+              cursor: "pointer",
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(1.1rem, 2vw, 1.35rem)",
+              fontWeight: 800,
+              padding: "16px 18px",
+            }}
+          >
+            Promotional Materials
+          </summary>
+          <div style={{ borderTop: "1px solid color-mix(in srgb, var(--chapter-color) 14%, white)", padding: "18px 20px 22px" }}>
+            <p style={{ color: "#111", fontFamily: "var(--font-poppins)", fontSize: "1rem", lineHeight: 1.7, margin: "0 0 12px" }}>
+              Promotional Materials include:
+            </p>
+            <ul style={{ color: "#111", fontFamily: "var(--font-poppins)", fontSize: "1rem", lineHeight: 1.7, margin: "0 0 16px", paddingLeft: 22 }}>
+              <li>POPCORN Fact sheets, one for collaborators and one for patients and families</li>
+              <li>Network Structure Infographic</li>
+              <li>Map of participating sites</li>
+              <li>Organizational structure</li>
+            </ul>
+            <p style={{ color: "#111", fontFamily: "var(--font-poppins)", fontSize: "1rem", lineHeight: 1.7, margin: "0 0 14px" }}>
+              All are available in English and French to download on website:{" "}
+              <a href="https://www.popcornpediatrics.ca/promotional-materials" target="_blank" rel="noopener noreferrer">POPCORN Promotional Materials</a>. These tools are great to share within your organization, include in presentations, or print to display at your desk.
+            </p>
+            <p style={{ color: "#111", fontFamily: "var(--font-poppins)", fontSize: "1rem", lineHeight: 1.7, margin: 0 }}>
+              Templates such as plain language study summaries, PowerPoint presentations, and posters are available to network members. Contact our Knowledge Broker,{" "}
+              <a href="mailto:megan.balenick@umanitoba.ca">Megan Bale-Nick</a>, to learn more.
+            </p>
           </div>
-        ))}
+        </details>
       </div>
+
+      <ByTheNumbers />
+      <SNAContent />
     </section>
   );
 }

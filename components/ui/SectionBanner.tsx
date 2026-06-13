@@ -1,36 +1,38 @@
+import type { ReactNode } from "react";
+import Image from "next/image";
 import { CopyLink } from "@/components/ui/CopyLink";
+import { getSectionTheme } from "@/content/data/section-themes";
 
 type Props = {
   id: string;
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
 };
 
 export function SectionBanner({ id, title, subtitle }: Props) {
+  const theme = getSectionTheme(id);
+
   return (
-    <div
-      style={{
-        background: "#253587",
-        marginLeft: -48,
-        marginRight: -48,
-        padding: "36px 48px 32px",
-        marginBottom: 40,
-      }}
-      className="section-banner"
-    >
-      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12 }}>
+    <div className="section-banner">
+      {theme.bannerSrc ? (
+        <Image
+          src={theme.bannerSrc}
+          alt={theme.bannerAlt}
+          width={4096}
+          height={1714}
+          sizes="(max-width: 768px) 100vw, min(1180px, calc(100vw - 312px))"
+          style={{ width: "100%", height: "auto", display: "block" }}
+        />
+      ) : (
+        <h2 className="section-fallback-title">{title}</h2>
+      )}
+
+      <div className="section-banner-meta">
         <div>
-          <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "white", margin: 0, lineHeight: 1.15 }}>
-            {title}
-          </h2>
-          {subtitle && (
-            <p style={{ fontFamily: "var(--font-poppins)", fontSize: 16, color: "rgba(255,255,255,0.75)", marginTop: 10, maxWidth: 640, lineHeight: 1.65, marginBottom: 0 }}>
-              {subtitle}
-            </p>
-          )}
+          {subtitle && <p>{subtitle}</p>}
         </div>
-        <div style={{ paddingTop: 6, flexShrink: 0 }}>
-          <CopyLink id={id} light />
+        <div className="section-copy-link">
+          <CopyLink id={id} light={false} />
         </div>
       </div>
     </div>

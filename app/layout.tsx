@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Poppins, Coming_Soon } from "next/font/google";
+import { Fraunces, Nunito_Sans } from "next/font/google";
 import { PaperGrain } from "@/components/PaperGrain";
 import "./globals.css";
 
@@ -10,24 +10,18 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
-
-const comingSoon = Coming_Soon({
-  variable: "--font-coming-soon",
-  subsets: ["latin"],
-  weight: "400",
+  weight: "variable",
+  axes: ["wdth"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "POPCORN 2026 Impact Report",
+  title: "POPCORN 2025 Impact Report",
   description:
-    "Pandemic Readiness Research Shaping the Future of Maternal and Child Health. A pan-Canadian pediatric research network at 16 hospitals across Canada.",
+    "Research shaping the future of maternal and child health. A pan-Canadian pediatric research network at 16 hospitals across Canada.",
 };
 
 export default function RootLayout({
@@ -38,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${poppins.variable} ${comingSoon.variable} h-full`}
+      className={`${fraunces.variable} ${nunitoSans.variable} h-full`}
     >
       <body className="min-h-full antialiased">
         <PaperGrain />

@@ -10,8 +10,8 @@ export function FadeIn({ children, delay = 0, style = {} }: Props) {
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setVis(true);
-      return;
+      const frame = window.requestAnimationFrame(() => setVis(true));
+      return () => window.cancelAnimationFrame(frame);
     }
     const obs = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) { setTimeout(() => setVis(true), delay); obs.disconnect(); } },

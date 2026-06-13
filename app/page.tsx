@@ -8,7 +8,6 @@ import { PatientEngagement } from "@/components/sections/PatientEngagement";
 import { EDI } from "@/components/sections/EDI";
 import { ECR } from "@/components/sections/ECR";
 import { KnowledgeMobilization } from "@/components/sections/KnowledgeMobilization";
-import { SNA } from "@/components/sections/SNA";
 import { WhatsNext } from "@/components/sections/WhatsNext";
 import { Credits } from "@/components/sections/Credits";
 
@@ -26,27 +25,22 @@ export default function Home() {
       <NavRail />
 
       <main
-        style={{
-          marginLeft: 200,
-          minHeight: "100vh",
-        }}
-        className="md:ml-[200px] ml-0"
+        className="min-h-screen md:ml-[200px]"
         id="main-content"
       >
         {/* Hero is full-bleed within the content column */}
         <Landing />
 
         {/* Remaining sections with padding */}
-        <div style={{ padding: "64px 48px 100px" }} className="px-5 md:px-12">
+        <div className="report-sections pb-20 pt-12 md:pb-24 md:pt-16">
           <LandAck />
           <div style={{ marginTop: 80 }}><Leadership /></div>
           <div style={{ marginTop: 80 }}><Goals /></div>
-<div style={{ marginTop: 80 }}><Projects /></div>
+          <div style={{ marginTop: 80 }}><Projects /></div>
           <div style={{ marginTop: 80 }}><PatientEngagement /></div>
           <div style={{ marginTop: 80 }}><EDI /></div>
           <div style={{ marginTop: 80 }}><ECR /></div>
           <div style={{ marginTop: 80 }}><KnowledgeMobilization /></div>
-          <div style={{ marginTop: 80 }}><SNA /></div>
           <div style={{ marginTop: 80 }}><WhatsNext /></div>
           <div style={{ marginTop: 80 }}><Credits /></div>
         </div>
