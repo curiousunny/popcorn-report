@@ -75,7 +75,7 @@ export function NavRail() {
           padding: "24px 0", overflowY: "auto",
           boxShadow: "2px 0 16px rgba(37,53,135,0.04)",
         }}
-        className="hidden md:flex"
+        className="hidden min-[769px]:flex"
       >
         <div style={{ padding: "8px 20px 24px", borderBottom: "1px solid #f5f5f5", marginBottom: 16 }}>
           <Image src="/POPCORN_logo.png" alt="POPCORN" height={28} width={106} style={{ height: 28, width: "auto" }} />
@@ -103,7 +103,7 @@ export function NavRail() {
 
       {/* Mobile top bar */}
       <header
-        className={`fixed left-0 right-0 top-0 z-[160] flex h-14 items-center gap-3 border-b border-white/50 bg-white/78 px-4 shadow-[0_8px_30px_rgba(37,53,135,0.08)] backdrop-blur md:hidden ${
+        className={`fixed left-0 right-0 top-0 z-[160] flex h-14 items-center gap-3 border-b border-white/50 bg-white/78 px-4 shadow-[0_8px_30px_rgba(37,53,135,0.08)] backdrop-blur min-[769px]:hidden ${
           barHidden && !menuOpen ? "-translate-y-full" : "translate-y-0"
         }`}
         style={{ transition: "transform 220ms ease" }}
@@ -144,37 +144,10 @@ export function NavRail() {
         </button>
       </header>
 
-      {/* Mobile progress rail */}
-      <nav
-        aria-label="Section shortcuts"
-        className="fixed right-2 top-1/2 z-[120] flex -translate-y-1/2 flex-col items-center gap-2 rounded-full bg-white/72 px-2 py-3 shadow-[0_8px_28px_rgba(37,53,135,0.12)] backdrop-blur md:hidden"
-      >
-        {NAV_SECTIONS.map((s) => (
-          <a
-            key={s.id}
-            href={`#${s.id}`}
-            className="flex h-5 w-5 items-center justify-center"
-            aria-label={`Jump to ${s.label}`}
-            aria-current={active === s.id ? "true" : undefined}
-          >
-            <span
-              className="block rounded-full"
-              style={{
-                width: active === s.id ? 10 : 6,
-                height: active === s.id ? 10 : 6,
-                background: active === s.id ? activeTheme.mainColor : "rgba(37,53,135,0.28)",
-                boxShadow: active === s.id ? `0 0 0 4px ${activeTheme.mainColor}24` : "none",
-                transition: "all 180ms ease",
-              }}
-            />
-          </a>
-        ))}
-      </nav>
-
       {/* Mobile full-screen menu */}
       <div
         id="mobile-section-menu"
-        className={`fixed inset-0 z-[150] bg-[#253587]/92 px-5 pb-8 pt-20 text-white backdrop-blur-sm md:hidden ${
+        className={`fixed inset-0 z-[150] bg-[#253587]/92 px-5 pb-8 pt-20 text-white backdrop-blur-sm min-[769px]:hidden ${
           menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
         style={{ transition: "opacity 220ms ease" }}
@@ -205,7 +178,7 @@ export function NavRail() {
       {/* Mobile section cue */}
       <div
         key={active}
-        className="mobile-section-cue pointer-events-none fixed bottom-5 left-4 z-[130] rounded-full bg-white/84 px-3 py-2 text-[12px] font-semibold text-[#253587] shadow-[0_8px_28px_rgba(37,53,135,0.12)] backdrop-blur md:hidden"
+        className="mobile-section-cue pointer-events-none fixed bottom-5 left-4 z-[130] rounded-full bg-white/84 px-3 py-2 text-[12px] font-semibold text-[#253587] shadow-[0_8px_28px_rgba(37,53,135,0.12)] backdrop-blur min-[769px]:hidden"
         style={{ fontFamily: "var(--font-poppins)", color: activeTheme.mainColor }}
         aria-hidden="true"
       >

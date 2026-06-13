@@ -25,7 +25,7 @@ export default function Home() {
       <NavRail />
 
       <main
-        className="min-h-screen md:ml-[200px]"
+        className="min-h-screen min-[769px]:ml-[200px]"
         id="main-content"
       >
         {/* Hero is full-bleed within the content column */}

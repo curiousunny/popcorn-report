@@ -85,10 +85,10 @@ export function Landing() {
       ))}
 
       {/* Content */}
-      <div style={{ textAlign: "center", maxWidth: 700, position: "relative", zIndex: 2 }}>
+      <div style={{ textAlign: "center", width: "calc(100vw - 48px)", maxWidth: 700, position: "relative", zIndex: 2 }}>
         <FadeIn>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image src="/POPCORN_logo.png" alt="POPCORN" width={260} height={69} style={{ height: "clamp(58px, 12vw, 76px)", width: "auto" }} priority />
+            <Image src="/POPCORN_logo.png" alt="POPCORN" width={260} height={69} style={{ width: "min(260px, 100%)", height: "auto" }} priority />
           </div>
         </FadeIn>
         <FadeIn delay={150}>
@@ -111,7 +111,7 @@ export function Landing() {
           <h1 style={{
             fontFamily: "var(--font-heading)", fontWeight: 700,
             fontSize: "clamp(20px, 3vw, 28px)", color: "#253587",
-            margin: "28px auto 16px", lineHeight: 1.3, maxWidth: "min(580px, calc(100vw - 88px))",
+            margin: "28px auto 16px", lineHeight: 1.3, maxWidth: "min(580px, 100%)",
           }}>
             Research Shaping the Future of Maternal and Child Health.
           </h1>
@@ -119,6 +119,11 @@ export function Landing() {
         <FadeIn delay={400}>
           <p style={{ fontFamily: "var(--font-poppins)", fontSize: 18, color: "#111", margin: "0 0 40px" }}>
             2025 Impact Report
+          </p>
+        </FadeIn>
+        <FadeIn delay={500}>
+          <p className="mobile-desktop-note">
+            This interactive report is best experienced on desktop. You can still explore the full report on mobile.
           </p>
         </FadeIn>
         <FadeIn delay={600}>

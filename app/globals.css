@@ -29,6 +29,10 @@
 
 html { scroll-behavior: smooth; }
 
+#hero-section {
+  scroll-margin-top: 80px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -117,7 +121,13 @@ button { font-family: inherit; }
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1;
+  max-width: 100%;
   margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.mobile-desktop-note {
+  display: none;
 }
 
 .section-banner-meta {
@@ -491,8 +501,24 @@ button { font-family: inherit; }
 }
 
 @media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  #hero-section,
+  .chapter-section,
+  .land-ack-section {
+    scroll-margin-top: 92px;
+  }
+
   .section-banner {
     margin-bottom: 24px;
+  }
+
+  .section-fallback-title {
+    font-size: clamp(1.85rem, 10vw, 2.75rem);
+    line-height: 1.08;
   }
 
   .section-banner img {
@@ -518,6 +544,22 @@ button { font-family: inherit; }
   .report-sections {
     max-width: none;
     padding-inline: 0;
+  }
+
+  .mobile-desktop-note {
+    display: block;
+    max-width: min(100%, 420px);
+    margin: -18px auto 32px;
+    border: 1px solid rgba(37, 53, 135, 0.14);
+    border-radius: 16px;
+    background: rgba(255, 248, 232, 0.92);
+    color: #253587;
+    font-family: var(--font-poppins);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+    padding: 12px 14px;
+    box-shadow: 0 8px 24px rgba(37, 53, 135, 0.08);
   }
 }
 
