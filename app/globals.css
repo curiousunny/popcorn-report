@@ -369,6 +369,7 @@ button { font-family: inherit; }
   font-size: 11px;
   font-weight: 900;
   line-height: 1;
+  min-height: 44px;
   padding: 7px 10px;
 }
 
@@ -459,8 +460,19 @@ button { font-family: inherit; }
     grid-template-columns: 1fr;
   }
 
+  .goal-flip-card {
+    aspect-ratio: 1 / 1.42;
+  }
+
+  .goal-flip-label {
+    align-content: center;
+    gap: 10px;
+    padding: 16px 18px 20px;
+  }
+
   .goal-tap-cue {
     display: inline-flex;
+    width: min(100%, 150px);
   }
 }
 
@@ -667,6 +679,7 @@ button { font-family: inherit; }
   font-size: 11px;
   font-weight: 900;
   line-height: 1;
+  min-height: 44px;
   padding: 7px 10px;
 }
 
@@ -1472,6 +1485,10 @@ button { font-family: inherit; }
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .km-stat-card {
+    aspect-ratio: 1 / 1.32;
+  }
+
   .bn-dashboard {
     grid-template-columns: 1fr;
   }
@@ -1493,8 +1510,19 @@ button { font-family: inherit; }
     grid-template-columns: 1fr;
   }
 
+  .km-stat-card {
+    aspect-ratio: 1 / 1.42;
+  }
+
+  .km-stat-card-label {
+    align-content: center;
+    gap: 10px;
+    padding: 16px 18px 20px;
+  }
+
   .km-tap-cue {
     display: inline-flex;
+    width: min(100%, 150px);
   }
 
   .km-stat-card-detail:hover,
